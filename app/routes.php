@@ -24,3 +24,7 @@ Route::get('/Panel', function()
 {
 	return View::make('Usuario.formRegistro');
 });
+Route::get('Panel/Usuario', function()
+{
+	return View::make('Usuario.formRegistro');
+});
