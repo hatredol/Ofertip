@@ -10,11 +10,15 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+/*PARTE WEBSITE*/
 Route::get('/', function()
 {
-	return View::make('PanelUsuario');
+	return View::make('Template.templateWebOfertip');
 });
+
+
+
+/*PARTE PANEL ADMINISTRACION*/
 
 Route::get('/Panel', function()
 {
