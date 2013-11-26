@@ -17,7 +17,6 @@ Route::get('/', function()
 });
 
 
-
 /*PARTE PANEL ADMINISTRACION*/
 
 Route::get('/Panel', function()
