@@ -12,6 +12,10 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 	 
 	public function up()
 	{
+		Schema::create('TipoUsuario', function(Blueprint $table) {
+			$table->increments('idTipoUsuario');
+			$table->string('nombreTipoUsuario', 100)->nullable();
+		});
 		Schema::create('CategoriaTienda', function(Blueprint $table) {
 			$table->increments('idCategoriaTienda');
 			$table->string('nombreCategoriaTienda', 100)->nullable();
@@ -60,9 +64,11 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 		
 		Schema::create('Usuario', function(Blueprint $table) {
 			$table->increments('idUsuario');
+			$table->unsignedInteger('idTipoUsuario');
 			$table->string('usuario', 45)->nullable();
-			$table->string('password', 45)->nullable();
+			$table->string('password', 60)->nullable();
 			$table->string('indicadorActivo', 1)->default('A')->nullable();
+			$table->foreign('idTipoUsuario')->references('idTipoUsuario')->on('TipoUsuario');
 		});
 		Schema::create('Tienda', function(Blueprint $table) {
 			$table->increments('idTienda');
@@ -135,7 +141,23 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 	 
 	public function down()
 	{
-		Schema::drop('AsignacionContenidoMultimediaOferta');
+		Schema::drop('ContenidoMultimediaTienda');
+		Schema::drop('ContenidoMultimediaOferta');
+		Schema::drop('TokenOferta');
+		Schema::drop('Suscripcion');
+		Schema::drop('Plan');
+		Schema::drop('Oferta');
+		Schema::drop('Tienda');
+		Schema::drop('TipoPlan');
+		Schema::drop('Usuario');
+		Schema::drop('Cliente');
+		Schema::drop('PersonaNatural');
+		Schema::drop('PersonaJuridica');
+		Schema::drop('Persona');
+		Schema::drop('ContenidoMultimedia');
+		Schema::drop('TipoContenidoMultimedia');
+		Schema::drop('CategoriaTienda');
+		
 	}
 
 }

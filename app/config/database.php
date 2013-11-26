@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => 'id-peru.com',
 			'database'  => 'ofertipdb',
-			'username'  => 'root',
-			'password'  => '',
+			'username'  => 'ofertip',
+			'password'  => 'test',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

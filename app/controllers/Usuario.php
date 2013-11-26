@@ -1,0 +1,42 @@
+<?php
+use App\Controllers\Interfaces\IPostMantenimiento;
+use App\Controllers\Interfaces\IGetMantenimiento;
+
+class UsuarioController extends BaseController implements IPostMantenimiento,IGetMantenimiento{
+
+	public static function AgregarBD(){
+		Usuario::create(AsignarValoresPost());
+	}
+	public static function ModificarBD($idRegistro){
+		$Usuario = Usuario::find($idRegistro);
+		$Usuario->fill(UsuarioController::AsignarValoresPost());
+		$Usuario->save();
+		return $Usuario;
+	}
+	public static function AsignarValoresPost(){
+		array(
+			'usuario'=>Input::get('idCategoriaUsuario'),
+			'password'=>Input::get('idUsuario');
+	}
+
+	public static function Registrar(){
+		return View::make('');
+	}
+
+	public static function Editar($idRegistro){
+		return View::make('')
+		->with('idRegistro',$idRegistro);
+	}
+
+	public static function ListarTodo(){
+		return Usuario::all();
+	}
+
+	public static function ListarPorID($idRegistro){
+		$Usuario = Usuario::get($idRegistro);
+		$Usuario->load('personajuridica');
+		$Usuario->load('persona');
+		return $Usuario;
+	}
+
+}
