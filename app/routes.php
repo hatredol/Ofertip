@@ -13,7 +13,7 @@
 /*PARTE WEBSITE*/
 Route::get('/', function()
 {
-	return View::make('Template.templateWebOfertip');
+	return View::make('WebSite.index');
 });
 
 
