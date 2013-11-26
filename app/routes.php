@@ -13,5 +13,10 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('PanelUsuario');
+});
+
+Route::get('/Panel', function()
+{
+	return View::make('Usuario.formRegistro');
 });
