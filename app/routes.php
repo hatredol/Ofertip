@@ -27,3 +27,4 @@ Route::get('Panel/Usuario', function()
 {
 	return View::make('Usuario.formRegistro');
 });
+Route::post('Panel/Usuario/AgregarBD', array('uses'=>'UsuarioController@AgregarBD'));

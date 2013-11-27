@@ -7,7 +7,7 @@
         <h4 class="modal-title" id="modalLabelRegistro">Registrate!</h4>
       </div>
       <div class="modal-body">
-        <form name="formAgregar" role="form">
+        {{ Form::open(array('url' => 'Panel/Usuario/AgregarBD')) }}
 		  <div class="form-group">
 		    <label for="nombre">Nombre</label>
 		    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Escribe un Nombre">
@@ -26,7 +26,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
         <button type="submit" class="btn btn-default">Registrar</button>
-        </form>
+        {{ Form::close() }}
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
