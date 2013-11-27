@@ -21,12 +21,12 @@
 		<div class="header-inner">
 			<!-- BEGIN LOGO -->  
 			<a class="navbar-brand" href="index.html">
-			<img src="/public/img/logo.png" alt="logo" class="img-responsive" width="20%">
+			<img src="{{URL::asset('img/logo.png')}}" alt="logo" class="img-responsive" width="20%">
 			</a>
 			<!-- END LOGO -->
 			<!-- BEGIN RESPONSIVE MENU TOGGLER --> 
 			<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			<img src="/public/img/sidebar-toggler.jpg" alt="">
+			<img src="{{URL::asset('img/sidebar-toggler.jpg')}}" alt="">
 			</a> 
 			<!-- END RESPONSIVE MENU TOGGLER -->
 			<!-- BEGIN TOP NAVIGATION MENU -->
@@ -35,7 +35,7 @@
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" src="/public/img/avatar.jpg">
+					<img alt="" src="{{URL::asset('img/avatar.jpg')}}">
 					<span class="username">Angelo Leva</span>
 					<i class="fa fa-angle-down"></i>
 					</a>
@@ -69,12 +69,11 @@
 							
 							<li>
 								<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+
 								<form class="sidebar-search" action="extra_search.html" method="POST">
 									<div class="form-container">
 										<div class="input-box">
-											<a href="javascript:;" class="remove"></a>
-											<input type="text" placeholder="Search...">
-											<input type="button" class="submit" value=" ">
+											
 										</div>
 									</div>
 								</form>

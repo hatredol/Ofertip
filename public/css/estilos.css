@@ -363,3 +363,15 @@ Sidebar toggler(show/hide)
 .page-sidebar-closed  .page-content {
   margin-left: 35px !important;
 }
+.menu-tiendas li a
+{
+  text-decoration: none;
+  color: #34495e;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 100;
+}
+.menu-tiendas li a:hover
+{
+  text-decoration: none;
+  color: #3498db;
+}
