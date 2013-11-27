@@ -1,0 +1,29 @@
+body, header
+{
+	font-family: 'Oxygen', sans-serif;
+}
+input.form-agregartienda
+{
+  background-color: #DCE7F5;
+  border: 0;
+  -webkit-transition: background-color linear .2s;
+  -moz-transition: background-color linear .2s;
+  -o-transition: background-color linear .2s;
+  transition: background-color linear .2s;
+  color: #555555;
+  display: inline-block;
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+  margin-bottom: 10px;
+  padding: 10px 6px;
+  vertical-align: middle;
+  width: 80%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+header
+{
+	text-align: center;
+}
