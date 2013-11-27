@@ -13,8 +13,13 @@ class UsuarioController extends BaseController implements IPostMantenimiento,IGe
 		$Usuario->save();
 		return $Usuario;
 	}
+	public static function Registrar(){
+
+	}
+	
 	public static function AsignarValoresPost(){
 		array(
+			'idCategoriaUsuario'=>
 			'usuario'=>Input::get('idCategoriaUsuario'),
 			'password'=>Input::get('idUsuario');
 	}
