@@ -27,4 +27,3 @@ Route::get('/Panel', function()
 {
 	return View::make('formLogin');
 });
-
