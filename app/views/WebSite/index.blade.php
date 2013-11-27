@@ -6,7 +6,8 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Ofertip</title>
 			{{HTML::style('css/bootstrap.min.css')}}
-		    {{HTML::style('css/bootstrap-theme.min.css')}}
+			{{HTML::style('font-awesome/css/font-awesome.min.css')}}
+		    {{HTML::style('css/website.css')}}
 		    
 	</head>
 	<body>
@@ -18,7 +19,7 @@
 		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 		            <span data-icon="" aria-hidden="true"></span>
 		          </button>
-		          <a class="navbar-brand" href=""><img src="img/logo.png" class="img-responsive" alt="" style="margin-bottom: 24px; width:50%"></a>
+		          <a class="navbar-brand" href=""><img src="img/logo.png" class="img-responsive" alt="" style="margin-bottom: 24px; margin-top: 24px"></a>
 		        </div>
 		        <div id="main-nav" class="collapse navbar-collapse navbar-collapse">          
 		          <ul class="nav navbar-nav fancy-nav navbar-right">
@@ -28,8 +29,8 @@
 		            <li><a href="#section-portfolio"><span data-hover="work">Beneficios</span></a></li>
 		            <li><a href="#section-pricing"><span data-hover="pricing">Planes</span></a></li>
 		            <li class=""><a href="#section-contact"><span data-hover="contact">Contacto</span></a></li>
-		            <li class=""><button class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalRegistro">
-					  Registrarse
+		            <li class=""><a href="#modalRegistro" data-toggle="modal" data->
+					  <i class="fa fa-user fa-2x"></i></a>
 					</button></li>
 		          </ul>
 		        </div><!-- /navbar-collapse -->
