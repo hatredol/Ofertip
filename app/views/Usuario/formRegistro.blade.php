@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-@extends('Template.templatePanelAdministracion')
-@section('Contenido')
-	<h1>Agregar Usuario</h1>
-	<h1>Agregar Usuario</h1>
-	<h1>Agregar Usuario</h1>
-	<h1>Agregar Usuario</h1>
-@endsection
-=======
+
 <!-- Modal -->
 <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalLabelRegistro" aria-hidden="true">
   <div class="modal-dialog">
@@ -41,4 +33,3 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
->>>>>>> e6520e11dfa152bf6715ab362dd0274e8ad19e4e
