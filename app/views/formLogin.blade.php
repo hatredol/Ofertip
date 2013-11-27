@@ -14,15 +14,15 @@
     <div class="row">
       <div class="col-md-3 col-md-offset-5" style="margin-top:200px">
           <h2>Ingreso al Sistema</h2>
-          {{ Form::open(array('url' => 'Usuarios/Login')) }}
+          {{ Form::open(array('url' => 'Panel/Usuario/Login')) }}
     
               <div class="form-group">
                 <label for="email">Usuario:</label>
-                <input type="email" class="form-control" id="usuario" placeholder="Ingresa tu email">
+                <input type="text" class="form-control" name="usuario" placeholder="Ingresa tu email">
               </div>
               <div class="form-group">
                 <label for="password">Contrase&ntilde;a:</label>
-                <input type="password" class="form-control" id="password" placeholder="Escribe tu Contrase&ntild;a">
+                <input type="password" class="form-control" name="password" placeholder="Escribe tu Contrase&ntild;a">
               </div>
               
               <div class="checkbox">

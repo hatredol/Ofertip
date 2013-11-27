@@ -47,7 +47,12 @@ class UsuarioController extends BaseController implements IPostMantenimiento,IGe
 			'password'=>Input::get('password'));
 		if(Auth::attempt($Usuario,true))
 		{
-			Redirect::route('/');
+			echo "logged";
+			Redirect::to('Panel/Usuario');
+		}
+		else
+		{
+			echo die(var_dump($Usuario));
 		}
 	}
 
