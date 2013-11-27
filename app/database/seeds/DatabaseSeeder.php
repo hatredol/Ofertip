@@ -10,8 +10,19 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
-
-		// $this->call('UserTableSeeder');
+		$this->call('TipoUsuarioTableSeeder');
+        $this->command->info('TipoUsuario table seeded!');
+		// $this->call('TipoUsuarioTableSeeder');
 	}
+
+}
+
+class TipoUsuarioTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('TipoUsuario')->delete();
+        TipoUsuario::create(array('nombreTipoUsuario' => 'Empresa'));
+    }
 
 }

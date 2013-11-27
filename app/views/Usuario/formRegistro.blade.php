@@ -20,8 +20,6 @@
 		    <label for="recontrasena">Repetir-Contraseña:</label>
 		    <input type="password" class="form-control" id="repassword" placeholder="Vuelve a escribir la Contraseña">
 		  </div>
-		  
-		
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>

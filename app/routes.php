@@ -27,3 +27,9 @@ Route::get('/Panel', function()
 {
 	return View::make('formLogin');
 });
+
+
+
+/*Charlie*/
+Route::post('Panel/Usuario/AgregarBD',array('uses'=>'UsuarioController@AgregarBD'));
+Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
