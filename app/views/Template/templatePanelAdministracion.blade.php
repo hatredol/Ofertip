@@ -89,21 +89,21 @@
 							<li class="">
 								<a href="index_horizontal_menu.html">
 								<i class="fa fa-briefcase"></i> 
-								<span class="title">Tiendas</span>
+								<span class="title">Ofertas</span>
 								</a>
 							</li>
 							<li class="">
 								<a href="javascript:;">
 								<i class="fa fa-cogs"></i> 
-								<span class="title">Perfil</span>
+								<span class="title">Suscritos</span>
 								
 								</a>
 								
 							</li>
-							<li class="tooltips" data-placement="right" data-original-title="Frontend&nbsp;Theme For&nbsp;Metronic&nbsp;Admin">
+							<li class="">
 								<a href="#">
 								<i class="fa fa-gift"></i> 
-								<span class="title">Otros</span>
+								<span class="title">Reportes</span>
 								</a>
 							</li>
 							<li class="">
@@ -142,6 +142,9 @@
 								</li>
 							</ul>
 							<!-- END PAGE TITLE & BREADCRUMB-->
+						</div>
+						<div class="col-md-12 text-center">
+							<img src="{{URL::asset('img/logo.png')}}" alt="">
 						</div>
 					</div>
 					@yield('Contenido')

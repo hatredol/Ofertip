@@ -1,3 +1,19 @@
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
+}
 body, header
 {
 	font-family: 'Oxygen', sans-serif;
@@ -45,7 +61,7 @@ a.link-menu:hover
 {
   background:#34495e; padding:10px 0; color:#fff; font-weight: 500; text-transform:uppercase;
 }
- #cap-asistente
+ #cap-codigos
 {
   background:#e74c3c; padding:10px 0; color:#fff; font-weight: 500; text-transform:uppercase;
 }

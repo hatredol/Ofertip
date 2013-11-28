@@ -1,53 +1,42 @@
 @extends('Template.templatePanelAdministracion')
 @section('Contenido')
-					<div class="row text-center">
-						<div class="col-md-3" style="background:#3498db; padding:10px">
-	               		 	<i class="fa fa-shopping-cart fa-2x" style="color: #fff;"></i><a class="link-menu" href="#"><h2 style="color:#fff; margin:20px; font-size: 1.5em">Mis Tiendas</h2></a>
-	              		</div>
-	              		<div class="col-md-3 col-md-offset-1" style="background:#2ecc71;padding:10px">
-	                		<i class="fa fa-user fa-2x" style="color: #fff;"></i><a class="link-menu" href="#"><h2 style="color:#fff; margin:20px; font-size: 1.5em">Mi Perfil</h2></a>
-	              		</div>
-	              		<div class="col-md-3 col-md-offset-1" style="background:#34495e;padding:10px">
-	                		<i class="fa fa-tag fa-2x" style="color: #fff;"></i><a class="link-menu" href="#"><h2 style="color:#fff; margin:20px; font-size: 1.5em">Mis Ofertas</h2></a>
-	              		</div>
-	              		
-					</div>
+					
 					<div class="row" style="margin-top:50px">
 		              
-		              <div class="col-md-6">
+		              <div class="col-md-4">
 		              	<div class="table-responsive">
 		              	<table class="table table-bordered table-striped">
 		                  <caption id="cap-usuarios">Ultimos Suscritos</caption>
 		                  <thead>
 		                    <tr>
-		                      <th>#</th>
+		                      <!-- <th>#</th>
 		                      <th>Nombre</th>
-		                      <th>Fecha Suscripcion</th>
+		                      <th>Fecha Suscripcion</th> -->
 		                      
 		                    </tr>
 		                  </thead>
 		                  <tbody>
 		                    <tr>
-		                      <td>1</td>
-		                      <td>Castelino</td>
+		                      <td><img src="{{URL::asset('img/avatar.jpg')}}" alt=""></td>
+		                      <td>Jeyson Fuentes</td>
 		                      <td>20/11/2013</td>
 		                      
 		                    </tr>
 		                    <tr>
-		                      <td>1</td>
-		                      <td>Castelino</td>
+		                      <td><img src="{{URL::asset('img/avatar.jpg')}}" alt=""></td>
+		                      <td>Angelo Leva</td>
 		                      <td>20/11/2013</td>
 		                     
 		                    </tr>
 		                    <tr>
-		                      <td>1</td>
-		                      <td>Castelino</td>
+		                      <td><img src="{{URL::asset('img/avatar.jpg')}}" alt=""></td>
+		                      <td>Jorge Pacora</td>
 		                      <td>20/11/2013</td>
 		                      
 		                    </tr>
 		                    <tr>
-		                      <td>1</td>
-		                      <td>Castelino</td>
+		                      <td><img src="{{URL::asset('img/avatar.jpg')}}" alt=""></td>
+		                      <td>Charlie Ochoa</td>
 		                      <td>20/11/2013</td>
 		                      
 		                    </tr>
@@ -55,13 +44,13 @@
 		                </table> 
 		               </div>
 		              </div>
-		               <div class="col-md-6">
+		               <div class="col-md-8">
 		              	<div class="table-responsive">
 		                	<table class="table table-bordered table-striped">
 			                  <caption id="cap-tiendas">Ofertas Realizadas</caption>
 			                  <thead>
 			                    <tr>
-			                      <th>#</th>
+			                      <th>Estado</th>
 			                      <th>Nombre de Oferta</th>
 			                      <th>Descripcion</th>
 			                      <th>Fecha de Oferta</th>
@@ -70,28 +59,28 @@
 			                  </thead>
 			                  <tbody>
 			                    <tr>
-			                      <td>1</td>
+			                      <td><span class="label label-sm label-success label-mini" style="font-size:0.8em; font-weight:normal">Disponible</span></td>
 			                      <td>Pizza Vegetariana</td>
 			                      <td>Pizza vegetariana a S/.30.00</td>
 			                      <td>27/11/2013</td>
 			                      <td>12</td>
 			                    </tr>
 			                    <tr>
-			                      <td>1</td>
+			                      <td><span class="label label-sm label-danger" style="font-size:0.8em; font-weight:normal">Terminada</span></td>
 			                      <td>Pizza Vegetariana</td>
 			                      <td>Pizza vegetariana a S/.30.00</td>
 			                      <td>27/11/2013</td>
 			                      <td>12</td>
 			                    </tr>
 			                    <tr>
-			                      <td>1</td>
+			                      <td><span class="label label-sm label-danger" style="font-size:0.8em; font-weight:normal">Terminada</span></td>
 			                      <td>Pizza Vegetariana</td>
 			                      <td>Pizza vegetariana a S/.30.00</td>
 			                      <td>27/11/2013</td>
 			                      <td>12</td>
 			                    </tr>
 			                    <tr>
-			                      <td>1</td>
+			                      <td><span class="label label-sm label-danger" style="font-size:0.8em; font-weight:normal">Terminada</span></td>
 			                      <td>Pizza Vegetariana</td>
 			                      <td>Pizza vegetariana a S/.30.00</td>
 			                      <td>27/11/2013</td>
@@ -102,8 +91,57 @@
 		                </div>
 		              </div>
 		            </div>
+		            <div class="row">
+		            	<div class="col-md-8">
+		            	<div class="table-responsive">
+		            		<table class="table table-bordered table-striped">
+			                  <caption id="cap-codigos">Codigos de Oferta</caption>
+			                  <thead>
+			                    <tr>
+			                      <th>#</th>
+			                      <th>Codigo de Oferta</th>
+			                      <th>Nombre de Oferta</th>
+			                      <th>Usuario</th>
+			                      <th>Fecha de Uso</th>
+			                      
+			                    </tr>
+			                  </thead>
+			                  <tbody>
+			                    <tr>
+			                      <td>1</td>
+			                      <td>2013-05</td>
+			                      <td>Pizza vegetariana a S/.30.00</td>
+			                      <td>angelolev</td>
+			                      <td>27/11/2013</td>
+			                    </tr>
+			                    <tr>
+			                      <td>1</td>
+			                      <td>2013-05</td>
+			                      <td>Pizza vegetariana a S/.30.00</td>
+			                      <td>angelolev</td>
+			                      <td>27/11/2013</td>
+			                    </tr>
+			                    <tr>
+			                      <td>1</td>
+			                      <td>2013-05</td>
+			                      <td>Pizza vegetariana a S/.30.00</td>
+			                      <td>angelolev</td>
+			                      <td>27/11/2013</td>
+			                    </tr>
+			                    <tr>
+			                      <td>1</td>
+			                      <td>2013-05</td>
+			                      <td>Pizza vegetariana a S/.30.00</td>
+			                      <td>angelolev</td>
+			                      <td>27/11/2013</td>
+			                    </tr>
+			                  </tbody>
+			                </table>
+		            	</div>
+		            </div>
+		           </div>
 
-		        </div>
+		        
 	<!-- Modal -->
 	<div class="modal fade" id="modalTiendas" tabindex="-1" role="dialog" aria-labelledby="modalLabelRegistro" aria-hidden="true">
 	  <div class="modal-dialog">

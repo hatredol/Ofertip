@@ -27,6 +27,10 @@ Route::get('/Panel', function()
 {
 	return View::make('formLogin');
 });
+Route::get('Panel/Perfil', function()
+{
+	return View::make('Panel.Usuario.PerfilUsuario');
+});
 
 
 
