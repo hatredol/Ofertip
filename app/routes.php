@@ -31,19 +31,11 @@ Route::get('Panel/Perfil', function()
 {
 	return View::make('Panel.Usuario.PerfilUsuario');
 });
-Route::get('Panel/Ofertas', function()
+
+/*Jorge*/
+
+Route::get('/Panel/dashboard', function()
 {
-	return View::make('Panel.Usuario.OfertasTienda');
+	return View::make('Panel.Usuario.dashboard');
 });
-Route::get('Panel/Suscritos', function()
-{
-	return View::make('Panel.Usuario.SuscritosTienda');
-});
-Route::get('Panel/Codigos', function()
-{
-	return View::make('Panel.Usuario.CodigosOferta');
-});
-Route::get('Panel/Reportes', function()
-{
-	return View::make('Panel.Usuario.ReportesTienda');
-});
+
