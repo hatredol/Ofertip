@@ -48,8 +48,10 @@
     </script>
 </head>
 <body>
-    <div class="row">
-      <div class="col-md-3 col-md-offset-5" style="margin-top:200px">
+	<div style="padding: 0 15px">
+    <div class="row" >
+      <div class="col-md-3 col-md-offset-5 well" style="margin-top:200px;margin-bottom: 0px;border-radius:0px">
+      	  <p class="text-right"><a href="" class="btn btn-link">Registrate gratis!</a></p>
           <h2>Ingreso al Sistema</h2>
           {{ Form::open(array('url' => 'Panel/Usuario/Login','id'=>'formLogin')) }}
     
@@ -59,7 +61,7 @@
               </div>
               <div class="form-group">
                 <label for="password">Contrase&ntilde;a:</label>
-                <input type="password" class="form-control" name="password" placeholder="Escribe tu Contrase&ntild;a">
+                <input type="password" class="form-control" name="password" placeholder="Escribe tu Contrase&ntilde;a">
               </div>
               
               <div class="checkbox">
@@ -68,13 +70,30 @@
                 </label>
                 
               </div>
-
-              <a onclick="Login()" class="btn btn-default">Entrar</a>
-            {{ Form::close() }}
-            <a href="">Registrate gratis!</a>
-            <a href="">Olvidaste tu contrase&ntilde;a?</a>
+              	<a onclick="Login()" class="btn btn-default">Entrar</a>
+              	<a href="" class="btn btn-link">Olvidaste tu contrase&ntilde;a?</a>
+	            {{ Form::close() }}
+	            
       </div>
+      
     </div>
+    <div class="row" style="margin-top: 0px">
+	    <div class="col-md-3 col-md-offset-5 well" style="border-top-right-radius: 0px; border-top-left-radius:  0px;border-bottom-right-radius: 10px; border-bottom-left-radius:  10px;" >
+	      	<form>
+	      		<small style="margin-bottom: 20px">Si has olvidado tu contrase&ntilde;a, escribe tu mail para recuperarla, ¡AQUI!</small>
+	      		<div class="form-group">
+	                <div class="input-group">
+				      <input type="text" class="form-control" name="recuperarEmail" placeholder="Ingresa tu e-mail">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button">Recuperar!</button>
+				      </span>
+				    </div>
+	            </div>
+	        </form>
+	    </div>
+     </div>
+     
     @include('Tienda.formCambiarTienda')
+   </div>
 </body>
 </html>
