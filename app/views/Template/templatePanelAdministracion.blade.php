@@ -40,7 +40,7 @@
 					<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="extra_profile.html"><i class="fa fa-user"></i> Mi Perfil</a></li>
+						<li><a href="/public/Panel/Perfil"><i class="fa fa-user"></i> Mi Perfil</a></li>
 						<li><a href="#"><i class="fa fa-tasks"></i> Mis Tiendas</a></li>
 						<li class="divider"></li>
 						<li><a href="login.html"><i class="fa fa-key"></i> Salir</a></li>
@@ -80,34 +80,38 @@
 								<!-- END RESPONSIVE QUICK SEARCH FORM -->
 							</li>
 							<li class="start active ">
-								<a href="index.html">
+								<a href="/public/Panel/Usuario">
 								<i class="fa fa-home"></i> 
 								<span class="title">Inicio</span>
 								<span class="selected"></span>
 								</a>
 							</li>
 							<li class="">
-								<a href="index_horizontal_menu.html">
+								<a href="/public/Panel/Ofertas">
 								<i class="fa fa-briefcase"></i> 
 								<span class="title">Ofertas</span>
 								</a>
 							</li>
 							<li class="">
-								<a href="javascript:;">
+								<a href="/public/Panel/Suscritos">
 								<i class="fa fa-cogs"></i> 
 								<span class="title">Suscritos</span>
-								
 								</a>
-								
 							</li>
 							<li class="">
-								<a href="#">
+								<a href="/public/Panel/Codigos">
+								<i class="fa fa-cogs"></i> 
+								<span class="title">Codigos de Oferta</span>
+								</a>
+							</li>
+							<li class="">
+								<a href="/public/Panel/Reportes">
 								<i class="fa fa-gift"></i> 
 								<span class="title">Reportes</span>
 								</a>
 							</li>
 							<li class="">
-								<a href="javascript:;">
+								<a href="#">
 								<i class="fa fa-bookmark-o"></i> 
 								<span class="title">Salir</span>
 								
@@ -144,6 +148,7 @@
 							<!-- END PAGE TITLE & BREADCRUMB-->
 						</div>
 						<div class="col-md-12 text-center">
+							<h1>Nombre de Tienda</h1>
 							<img src="{{URL::asset('img/logo.png')}}" alt="">
 						</div>
 					</div>

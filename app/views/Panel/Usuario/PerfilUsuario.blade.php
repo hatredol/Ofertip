@@ -46,11 +46,16 @@
 					      		<img src="{{URL::asset('img/imgdefecto.png')}}" alt="..." class="img-thumbnail">
 					      		<img src="{{URL::asset('img/imgdefecto.png')}}" alt="..." class="img-thumbnail">
 					      	</div>
-						      <span class="btn btn-primary fileinput-button">
-	                              <i class="icon-plus"></i>
-	                          <span>Agregar Imagenes...</span>
-	                            <input type="file" name="multiUpload" id="multiUpload" multiple/>
-                          </span>
+						      	<span class="btn btn-primary fileinput-button">
+	                         	    <i class="icon-plus"></i>
+	                         	 <span>Agregar Imagenes...</span>
+	                            	<input type="file" name="multiUpload" id="multiUpload" multiple/>
+                          		</span>
+                          		<span class="btn btn-primary fileinput-button">
+	                         	    <i class="icon-plus"></i>
+	                         	 <span>Guardar Imagenes</span>
+	                            	<input type="file" name="multiUpload" id="multiUpload" multiple/>
+                          		</span>
 					      </div>
 					     	{{ Form::close() }}
 		            </div>
