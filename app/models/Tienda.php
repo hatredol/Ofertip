@@ -10,4 +10,12 @@ class Tienda extends Eloquent{
 		return $this->belongsToMany('ContenidoMultimedia','ContenidoMultimediaTienda','idTienda','idContenidoMultimedia')->orderBy('ContenidoMultimediaTienda.idContenidoMultimediaTienda', 'asc');
 	}
 
+	public function personajuridica(){
+		return $this->belongsTo('PersonaJuridica','idTienda');
+	}
+
+	public function scopeTiendasDeUsuario($query, $idUsuario)
+    {
+        return $query->where('idUsuario','=',$idUsuario);
+    }
 }
