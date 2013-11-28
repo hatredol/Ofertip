@@ -7,7 +7,7 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		    {{HTML::style('css/bootstrap.min.css')}}
 		    {{HTML::style('css/bootstrap-theme.min.css')}}
-		    {{HTML::style('css/estilos.css')}}
+		    {{HTML::style('css/estilos-admin.css')}}
 
 		    {{HTML::style('font-awesome/css/font-awesome.css')}}
 		    {{HTML::script('http://codeorigin.jquery.com/jquery-2.0.3.min.js')}}
