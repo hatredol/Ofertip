@@ -14,7 +14,7 @@
   direction: ltr;
   cursor: pointer;
 }
-body, header
+body, header, h1, h2, h3, h4, h5, h6, caption
 {
 	font-family: 'Oxygen', sans-serif;
 }
@@ -65,13 +65,21 @@ a.link-menu:hover
 {
   background:#e74c3c; padding:10px 0; color:#fff; font-weight: 500; text-transform:uppercase;
 }
-#cap-eventos
+#cap-rangofechas
 {
-  background:#3498db; padding:10px 0; color:#fff; font-weight: 500; text-transform:uppercase;
+  background-color: #4b8df8; font-size:1.2em; color:#fff; padding: 8px 10px 2px 10px;
 }
 #cap-usuarios
 {
   background:#9b59b6; padding:10px 0; color:#fff; font-weight: 500; text-transform:uppercase; 
+}
+#cap-fechadeterminada
+{
+  background-color: #35aa47; font-size:1.2em; color:#fff; padding: 8px 10px 2px 10px;
+}
+#cap-todasofertas
+{
+  background-color: #e74c3c; font-size:1.2em; color:#fff; padding: 8px 10px 2px 10px;
 }
 /***
 Page sidebar
