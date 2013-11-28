@@ -67,6 +67,7 @@
 		@include('WebSite.beneficios')
 		@include('WebSite.negocios')
 		@include('WebSite.planesyprecios')
+		@include('WebSite.contacto')
 				
 		<footer>
 		</footer>
