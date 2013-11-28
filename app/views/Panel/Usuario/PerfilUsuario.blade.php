@@ -17,11 +17,12 @@
 							    <input type="text" class="form-control" name="telefonoPersonaJuridica" placeholder="Telefono del local">
 							  </div>
 							  <div class="form-group">
-							  <option name="idCategoriaTienda">
-							  	<select>Categoria 1</select>
-							  	<select>Categoria 2</select>
-							  	<select>Categoria 3</select>
-							  </option>
+							  <label for="idCategoriaTienda">Categoria de su tienda:</label>
+							  <select name="idCategoriaTienda">
+							  	<option>Categoria 1</option>
+							  	<option>Categoria 2</option>
+							  	<option>Categoria 3</option>
+							  </select>
 							  </div>
 							  <div class="form-group">
 							  	<label for="descripcionTienda">Descripcion de la tienda:</label>
@@ -33,15 +34,24 @@
 							  </div>
 							  	<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 						        <button type="submit" class="btn btn-default">Guardar</button>
-						        {{ Form::close() }}
+						        
 					      </div>
 					      <div class="col-md-6">
+					      	<label>Fotos de su local:</label>
+					      	<div class="form-group">
+
+					      		<img src="{{URL::asset('img/imgdefecto.png')}}" alt="..." class="img-thumbnail">
+					      		<img src="{{URL::asset('img/imgdefecto.png')}}" alt="..." class="img-thumbnail">
+					      		<img src="{{URL::asset('img/imgdefecto.png')}}" alt="..." class="img-thumbnail">
+					      		<img src="{{URL::asset('img/imgdefecto.png')}}" alt="..." class="img-thumbnail">
+					      		<img src="{{URL::asset('img/imgdefecto.png')}}" alt="..." class="img-thumbnail">
+					      	</div>
 						      <span class="btn btn-primary fileinput-button">
 	                              <i class="icon-plus"></i>
 	                          <span>Agregar Imagenes...</span>
 	                            <input type="file" name="multiUpload" id="multiUpload" multiple/>
                           </span>
 					      </div>
-					     
+					     	{{ Form::close() }}
 		            </div>
 @endsection
