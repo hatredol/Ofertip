@@ -34,7 +34,3 @@ Route::get('Panel/Perfil', function()
 
 /*Jorge*/
 
-Route::get('/Panel/dashboard', function()
-{
-	return View::make('Panel.Usuario.dashboard');
-});
