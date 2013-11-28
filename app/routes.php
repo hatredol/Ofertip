@@ -32,6 +32,13 @@ Route::get('Panel/Perfil', function()
 	return View::make('Panel.Usuario.PerfilUsuario');
 });
 
+/*Jorge*/
+
+Route::get('/Panel/dashboard', function()
+{
+	return View::make('Panel.Usuario.dashboard');
+});
+
 
 
 /*Charlie*/
