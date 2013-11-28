@@ -11,41 +11,68 @@
 		    
 	</head>
 	<body>
-		<header id="header" class="">
+		<header id="header" class="morph-header-large">
 		    <nav role="navigation">
 		      <div class="container">
 		        <!-- Brand and toggle get grouped for better mobile display -->
 		        <div class="navbar-header">
 		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		            <span data-icon="" aria-hidden="true"></span>
+		            <span data-icon="fa fa-bars fa-4x" aria-hidden="true"></span>
 		          </button>
-		          <a class="navbar-brand" href=""><img src="img/logo.png" class="img-responsive" alt="" style="margin-bottom: 24px; margin-top: 24px"></a>
+		          <a class="navbar-brand" href=""><img src="img/logo.png" class="img-responsive" alt="" style="margin-bottom: 24px;"></a>
 		        </div>
 		        <div id="main-nav" class="collapse navbar-collapse navbar-collapse">          
 		          <ul class="nav navbar-nav fancy-nav navbar-right">
-		            <!--////////// NAVIGATION MENU //////////-->
-		            <li class="active"><a href="#section-home"><span data-hover="home">Inicio</span></a></li>
-		            <li><a href="#section-tour"><span data-hover="tour">¿Como Funciona?</span></a></li>
-		            <li><a href="#section-portfolio"><span data-hover="work">Beneficios</span></a></li>
-		            <li><a href="#section-pricing"><span data-hover="pricing">Planes</span></a></li>
-		            <li class=""><a href="#section-contact"><span data-hover="contact">Contacto</span></a></li>
-		            <li class=""><a href="#modalRegistro" data-toggle="modal" data->
+		            <!--////////// MENU //////////-->
+		            
+		            <li class="active"><a href="#funcionamiento"><span data-hover="¿Como Funciona?">¿Como Funciona?</span></a></li>
+		            <li><a href="#beneficios"><span data-hover="Beneficios">Beneficios</span></a></li>
+		            <li><a href="#inicio"><span data-hover="Locaciones">Locaciones</span></a></li>
+		            <li><a href="#planes"><span data-hover="Planes y Precios">Planes y Precios</span></a></li>
+		            <li class=""><a href="#contacto"><span data-hover="Contacto">Contacto</span></a></li>
+		            <!-- <li class=""><a href="#modalRegistro" data-toggle="modal" data->
 					  <i class="fa fa-user fa-2x"></i></a>
-					</button></li>
+					</button></li> -->
 		          </ul>
 		        </div><!-- /navbar-collapse -->
 		      </div><!-- /container -->
 		    </nav>
 		    @include('Usuario.formRegistro')
 	  	</header>
-		
+	  	<section class="section" id="inicio" data-section="1">
+			<div style="padding: 0 15px">
+			<div class="row">
+					<div id="inicio-Derecho" class="col-md-6 text-right" >
+						<img src="http://placehold.it/350x222" alt="imagen celulares">
+					</div>
+					<div id="inicio-Izquierdo"class="col-md-6 ">
+						<h1>Titulo Mensaje 1</h1>
+						<h1>Titulo Mensaje 2</h1>
+								
+						<p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
+						</p>	
+						<div id="descargas">
+							<div id="googleplay">
+				                <a href="#" target="_blank">
+								   	<img src="http://placehold.it/194x70" width="194" height="70">
+				                </a>
+				            </div>
+						</div>
+					</div>			
+					<div class="clearfix"></div>
+			</div>
+			</div>
+		</section>
 		@include('WebSite.funcionamiento')
-
+		@include('WebSite.beneficios')
+		@include('WebSite.negocios')
+		@include('WebSite.planesyprecios')
+				
 		<footer>
-
 		</footer>
 		{{HTML::script('http://codeorigin.jquery.com/jquery-2.0.3.min.js')}}
 		{{HTML::script('js/bootstrap.min.js')}}
+		{{HTML::script('js/website.js')}}
 
 	</body>
 </html>
