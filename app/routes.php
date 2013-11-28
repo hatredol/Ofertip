@@ -31,7 +31,7 @@ Route::get('Panel/Perfil', function()
 {
 	return View::make('Panel.Usuario.PerfilUsuario');
 });
-<<<<<<< HEAD
+
 
 /*Jorge*/
 
@@ -41,7 +41,7 @@ Route::get('/Panel/dashboard', function()
 });
 
 
-=======
+
 Route::get('Panel/Ofertas', function()
 {
 	return View::make('Panel.Usuario.OfertasTienda');
@@ -58,7 +58,6 @@ Route::get('Panel/Reportes', function()
 {
 	return View::make('Panel.Usuario.ReportesTienda');
 });
->>>>>>> 1161ec9c176dfc63b78badd8e14a99499881fa18
 
 /*Charlie*/
 Route::post('Panel/Usuario/AgregarBD',array('uses'=>'UsuarioController@AgregarBD'));
