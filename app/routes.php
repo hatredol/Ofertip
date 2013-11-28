@@ -39,3 +39,21 @@ Route::get('/Panel/dashboard', function()
 	return View::make('Panel.Usuario.dashboard');
 });
 
+/* ANGELO */
+
+Route::get('Panel/Ofertas', function()
+{
+	return View::make('Panel.Usuario.OfertasTienda');
+});
+Route::get('Panel/Suscritos', function()
+{
+	return View::make('Panel.Usuario.SuscritosTienda');
+});
+Route::get('Panel/Codigos', function()
+{
+	return View::make('Panel.Usuario.CodigosOferta');
+});
+Route::get('Panel/Reportes', function()
+{
+	return View::make('Panel.Usuario.ReportesTienda');
+});
