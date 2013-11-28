@@ -61,9 +61,12 @@ class UsuarioController extends BaseController implements IPostMantenimiento,IGe
 	}
 
 	public static function BuscarTiendasPorUsuario($idUsuario){
-		$Tienda = Tienda::tiendasDeUsuario($idUsuario)->get();
-		$Tienda->load('personajuridica');
-		return $Tienda;
+		return DB::table('Tienda')
+            ->join('PersonaJuridica', 'PersonaJuridica.idPersonaJuridica', '=', 'Tienda.idTienda')
+            ->join('Persona','Persona.idPersona','=','PersonaJuridica.idPersonaJuridica')
+            ->whereRAW('Tienda.idUsuario = '.$idUsuario)
+            ->select( 'PersonaJuridica.nombrePersonaJuridica','Persona.indicadorActivo')
+            ->get();
 	}
 
 }

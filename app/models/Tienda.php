@@ -14,6 +14,7 @@ class Tienda extends Eloquent{
 		return $this->belongsTo('PersonaJuridica','idTienda');
 	}
 
+
 	public function scopeTiendasDeUsuario($query, $idUsuario)
     {
         return $query->where('idUsuario','=',$idUsuario);

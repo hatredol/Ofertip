@@ -32,8 +32,6 @@ Route::get('Panel/Perfil', function()
 	return View::make('Panel.Usuario.PerfilUsuario');
 });
 
-
-
 /*Charlie*/
 Route::post('Panel/Usuario/AgregarBD',array('uses'=>'UsuarioController@AgregarBD'));
 Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
