@@ -38,16 +38,18 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->timestamp('fechaCreacion')->default(DB::raw('CURRENT_TIMESTAMP'))->nullable();
 		});
 		Schema::create('PersonaJuridica', function(Blueprint $table) {
-			$table->increments('idPersonaJuridica');
+			$table->unsignedInteger('idPersonaJuridica');
 			$table->string('nombrePersonaJuridica', 100)->nullable();
 			$table->string('direccionPersonaJuridica', 100)->nullable();
 			$table->string('telefonoPersonaJuridica', 45)->nullable();
+			$table->primary('idPersonaJuridica');
 			$table->foreign('idPersonaJuridica')->references('idPersona')->on('Persona');
 		});
 		Schema::create('PersonaNatural', function(Blueprint $table) {
-			$table->increments('idPersonaNatural');
+			$table->unsignedInteger('idPersonaNatural');
 			$table->string('nombrePersonaNatural', 45)->nullable();
 			$table->string('apellidoPaternoPersonaNatural', 45)->nullable();
+			$table->primary('idPersonaNatural');
 			$table->foreign('idPersonaNatural')->references('idPersona')->on('Persona');
 		});
 		Schema::create('Cliente', function(Blueprint $table) {
@@ -71,11 +73,12 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idTipoUsuario')->references('idTipoUsuario')->on('TipoUsuario');
 		});
 		Schema::create('Tienda', function(Blueprint $table) {
-			$table->increments('idTienda');
+			$table->unsignedInteger('idTienda');
 			$table->unsignedInteger('idCategoriaTienda');
 			$table->unsignedInteger('idUsuario');
 			$table->text('descripcionTienda')->nullable();
 			$table->string('horarioTienda', 100)->nullable();
+			$table->primary('idTienda');
 			$table->foreign('idCategoriaTienda')->references('idCategoriaTienda')->on('CategoriaTienda');
 			$table->foreign('idUsuario')->references('idUsuario')->on('Usuario');
 		});

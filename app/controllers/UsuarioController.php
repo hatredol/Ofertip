@@ -47,7 +47,8 @@ class UsuarioController extends BaseController implements IPostMantenimiento,IGe
 			'password'=>Input::get('password'));
 		if(Auth::attempt($Usuario,true))
 		{
-			Redirect::to('Panel/Usuario');
+			$UsuarioLogeado = Auth::user();
+			return UsuarioController::BuscarTiendasPorUsuario($UsuarioLogeado->idUsuario);
 		}
 		else
 		{
@@ -57,8 +58,12 @@ class UsuarioController extends BaseController implements IPostMantenimiento,IGe
 
 	public static function LogOut(){
 		Auth::logout();
-		//Falta Redireccionar
-		//Redirect::to('/');
+	}
+
+	public static function BuscarTiendasPorUsuario($idUsuario){
+		$Tienda = Tienda::tiendasDeUsuario($idUsuario)->get();
+		$Tienda->load('personajuridica');
+		return $Tienda;
 	}
 
 }
