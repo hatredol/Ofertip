@@ -33,4 +33,3 @@ Route::get('Panel/Perfil', function()
 });
 
 /*Jorge*/
-
