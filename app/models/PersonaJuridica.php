@@ -6,8 +6,4 @@ class PersonaJuridica extends Eloquent{
 	public $timestamps = false;
 	protected $guarded = array();
 
-	public function tienda(){
-
-		return $this->hasOne('Tienda','idTienda');
-	}
 }

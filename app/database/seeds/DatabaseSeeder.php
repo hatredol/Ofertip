@@ -32,6 +32,7 @@ class TipoUsuarioTableSeeder extends Seeder {
 
         DB::table('Persona')->delete();
         Persona::create(array());
+        Persona::create(array());
 
         DB::table('PersonaJuridica')->delete();
         PersonaJuridica::create(array(
@@ -39,6 +40,11 @@ class TipoUsuarioTableSeeder extends Seeder {
         	'nombrePersonaJuridica'=>'Tienda Ofertip',
 			'direccionPersonaJuridica'=>'Calle Tacna Nro 1920',
 			'telefonoPersonaJuridica'=>'947495863'));
+        PersonaJuridica::create(array(
+            'idPersonaJuridica'=>'2',
+            'nombrePersonaJuridica'=>'Tienda Marka-Comercial',
+            'direccionPersonaJuridica'=>'Calle Arica Nro 1920',
+            'telefonoPersonaJuridica'=>'947495863'));
 
         DB::table('CategoriaTienda')->delete();
         CategoriaTienda::create(array(
@@ -51,6 +57,12 @@ class TipoUsuarioTableSeeder extends Seeder {
         	'idUsuario'=>'1',
         	'descripcionTienda'=>'Una tienda Innovadora',
 			'horarioTienda'=>'Lunes-Viernes 9am-10pm'));
+        Tienda::create(array(
+            'idTienda'=>'2',
+            'idCategoriaTienda'=>'1',
+            'idUsuario'=>'1',
+            'descripcionTienda'=>'Una tienda para el futuro de Tacna',
+            'horarioTienda'=>'Lunes-Viernes 9am-10pm'));
     }
 
 }

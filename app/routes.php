@@ -18,18 +18,13 @@ Route::get('/', function()
 
 
 /*PARTE PANEL ADMINISTRACION*/
-
-Route::get('Panel/Usuario', function()
-{
-	return View::make('Panel.Usuario.PanelAdministracionUsuario');
-});
 Route::get('/Panel', function()
 {
 	return View::make('formLogin');
 });
-Route::get('Panel/Perfil', function()
+Route::get('Panel/Usuario', function()
 {
-	return View::make('Panel.Usuario.PerfilUsuario');
+	return View::make('Panel.Usuario.PanelAdministracionUsuario');
 });
 Route::get('Panel/Ofertas', function()
 {
@@ -48,9 +43,25 @@ Route::get('Panel/Reportes', function()
 	return View::make('Panel.Usuario.ReportesTienda');
 });
 
+Route::get('Panel/Perfil', function()
+{
+	return View::make('Panel.Usuario.PerfilUsuario');
+});
+Route::get('/Panel/dashboard', function()
+{
+	return View::make('Panel.Usuario.dashboard');
+});
+
+
 /*Charlie*/
 Route::post('Panel/Usuario/AgregarBD',array('uses'=>'UsuarioController@AgregarBD'));
 Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
 
 
-//Tienda
+/*Yeto*/
+
+
+/*Jorge*/
+
+
+/*Angelo*/

@@ -13,18 +13,22 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 	public function up()
 	{
 		Schema::create('TipoUsuario', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idTipoUsuario');
 			$table->string('nombreTipoUsuario', 100)->nullable();
 		});
 		Schema::create('CategoriaTienda', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idCategoriaTienda');
 			$table->string('nombreCategoriaTienda', 100)->nullable();
 		});
 		Schema::create('TipoContenidoMultimedia', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idTipoContenidoMultimedia');
 			$table->string('nombreContenidoMultimedia', 45)->nullable();
 		});
 		Schema::create('ContenidoMultimedia', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idContenidoMultimedia');
 			$table->unsignedInteger('idTipoContenidoMultimedia');
 			$table->string('rutaContenidoMultimedia', 100)->nullable();
@@ -33,11 +37,13 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 		});
 		
 		Schema::create('Persona', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idPersona');
 			$table->string('indicadorActivo', 1)->default('A')->nullable();
 			$table->timestamp('fechaCreacion')->default(DB::raw('CURRENT_TIMESTAMP'))->nullable();
 		});
 		Schema::create('PersonaJuridica', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->unsignedInteger('idPersonaJuridica');
 			$table->string('nombrePersonaJuridica', 100)->nullable();
 			$table->string('direccionPersonaJuridica', 100)->nullable();
@@ -46,6 +52,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idPersonaJuridica')->references('idPersona')->on('Persona');
 		});
 		Schema::create('PersonaNatural', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->unsignedInteger('idPersonaNatural');
 			$table->string('nombrePersonaNatural', 45)->nullable();
 			$table->string('apellidoPaternoPersonaNatural', 45)->nullable();
@@ -53,11 +60,14 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idPersonaNatural')->references('idPersona')->on('Persona');
 		});
 		Schema::create('Cliente', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->unsignedInteger('idCliente');
 			$table->string('idServicio', 45)->nullable();
+			$table->primary('idCliente');
 			$table->foreign('idCliente')->references('idPersonaNatural')->on('PersonaNatural');
 		});
 		Schema::create('TipoPlan', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idTipoPlan');
 			$table->string('nombreTipoPlan', 45)->nullable();
 			$table->string('costoTipoPlan', 45)->nullable();
@@ -65,6 +75,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 		});
 		
 		Schema::create('Usuario', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idUsuario');
 			$table->unsignedInteger('idTipoUsuario');
 			$table->string('usuario', 45)->nullable();
@@ -72,7 +83,9 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->string('indicadorActivo', 1)->default('A')->nullable();
 			$table->foreign('idTipoUsuario')->references('idTipoUsuario')->on('TipoUsuario');
 		});
+		
 		Schema::create('Tienda', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->unsignedInteger('idTienda');
 			$table->unsignedInteger('idCategoriaTienda');
 			$table->unsignedInteger('idUsuario');
@@ -83,6 +96,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idUsuario')->references('idUsuario')->on('Usuario');
 		});
 		Schema::create('Oferta', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idOferta');
 			$table->unsignedInteger('idTienda');
 			$table->text('descripcionOferta')->nullable();
@@ -95,6 +109,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
 		});
 		Schema::create('Plan', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idPlan');
 			$table->unsignedInteger('idTienda');
 			$table->unsignedInteger('idTipoPlan');
@@ -105,6 +120,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idTipoPlan')->references('idTipoPlan')->on('TipoPlan');
 		});
 		Schema::create('Suscripcion', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idSuscripcion');
 			$table->unsignedInteger('idCliente');
 			$table->unsignedInteger('idTienda');
@@ -112,6 +128,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
 		});
 		Schema::create('TokenOferta', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idTokenOferta');
 			$table->unsignedInteger('idOferta');
 			$table->unsignedInteger('idSuscripcion');
@@ -121,6 +138,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idSuscripcion')->references('idSuscripcion')->on('Suscripcion');
 		});
 		Schema::create('ContenidoMultimediaOferta', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idAsignacionContenidoMultimediaOferta');
 			$table->unsignedInteger('idContenidoMultimedia');
 			$table->unsignedInteger('idOferta')->references('idOferta')->on('Oferta');
@@ -128,6 +146,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idOferta')->references('idOferta')->on('Oferta');
 		});
 		Schema::create('ContenidoMultimediaTienda', function(Blueprint $table) {
+			$table->engine ='InnoDB';
 			$table->increments('idAsignacionContenidoMultimediaTienda');
 			$table->unsignedInteger('idContenidoMultimedia');
 			$table->unsignedInteger('idTienda');
