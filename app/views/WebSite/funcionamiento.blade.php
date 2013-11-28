@@ -1,7 +1,7 @@
 <section id='funcionamiento'>
 	<div class="container">
       <div class="row">
-        <h1 class="text-center">Take Our Tour</h1>
+        <h1 class="text-center">¿Como funciona?</h1>
         <ul class="media-list">
           
           <!--///// STEP 1 ///// -->
@@ -62,7 +62,7 @@
           <li class="media last-step col-md-12" id="tour-end">
             <div class="tour-step-icon final"><span data-icon="" aria-hidden="true"></span></div>
             <span class="tour-line-half"></span>
-            <p class="lead launch col-md-5 col-md-push-7">taking off!</p>
+            <p class="lead launch col-md-5 col-md-push-7">Y listo!</p>
           </li>
         </ul>
       </div><!-- /row -->
