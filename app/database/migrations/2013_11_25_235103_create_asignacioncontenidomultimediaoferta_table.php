@@ -48,6 +48,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->string('nombrePersonaJuridica', 100)->nullable();
 			$table->string('direccionPersonaJuridica', 100)->nullable();
 			$table->string('telefonoPersonaJuridica', 45)->nullable();
+			$table->string('RUC', 11)->nullable();
 			$table->primary('idPersonaJuridica');
 			$table->foreign('idPersonaJuridica')->references('idPersona')->on('Persona');
 		});
@@ -163,12 +164,12 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idContenidoMultimedia')->references('idContenidoMultimedia')->on('ContenidoMultimedia');
 		});
 
-		Schema::create('TagsTienda', function(Blueprint $table) {
+		Schema::create('TagTienda', function(Blueprint $table) {
 			$table->engine ='InnoDB';
+			$table->increments('idTagTienda');
 			$table->unsignedInteger('idTienda');
 			$table->string('nombreTags');
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
-			$table->foreign('idContenidoMultimedia')->references('idContenidoMultimedia')->on('ContenidoMultimedia');
 		});
 	}
 
