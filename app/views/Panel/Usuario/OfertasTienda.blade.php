@@ -2,7 +2,7 @@
 @section('Contenido')
 					
 					<div class="row">
-						<div class="col-md-8">
+						<div class="col-md-12">
 		              	<div class="table-responsive">
 		                	<table class="table table-bordered table-striped">
 			                  <caption id="cap-tiendas">Ofertas Realizadas</caption>
@@ -11,8 +11,9 @@
 			                      <th>Estado</th>
 			                      <th>Nombre de Oferta</th>
 			                      <th>Descripcion</th>
-			                      <th>Fecha de Oferta</th>
+			                      <th>Fecha Inicio de Oferta</th>
 			                      <th>Codigos Usados</th>
+			                      <th>Fecha Fin de Oferta</th>
 			                    </tr>
 			                  </thead>
 			                  <tbody>
@@ -27,6 +28,7 @@
 			                      <td>{{$oferta->descripcionOferta}}</td>
 			                      <td>{{$oferta->fechaInicioOferta}}</td>
 			                      <td>12</td>
+			                      <td>{{$oferta->fechaTerminoOferta}}</td>
 			                    </tr>
 			                  @endforeach  
 			                  </tbody>

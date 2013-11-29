@@ -23,6 +23,7 @@
 			<a class="navbar-brand" href="index.html">
 			<img src="{{URL::asset('img/logo.png')}}" alt="logo" class="img-responsive" width="20%">
 			</a>
+			<p style="color:#fff">Nombre de Tienda</p>
 			<!-- END LOGO -->
 			<!-- BEGIN RESPONSIVE MENU TOGGLER --> 
 			<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -148,7 +149,7 @@
 							<!-- END PAGE TITLE & BREADCRUMB-->
 						</div>
 						<div class="col-md-12 text-center">
-							<h1>Nombre de Tienda</h1>
+							
 							<img src="{{URL::asset('img/logo.png')}}" alt="">
 						</div>
 					</div>
