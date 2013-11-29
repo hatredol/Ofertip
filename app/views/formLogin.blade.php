@@ -39,7 +39,7 @@
 <body>
 	<div style="padding: 0 15px">
     <div class="row" >
-      <div class="col-md-3 col-md-offset-5 well" style="margin-top:200px;margin-bottom: 0px;border-radius:0px">
+      <div class="col-md-3 col-md-offset-5 well" style="margin-top:160px;margin-bottom: 0px;border-radius:0px">
       	  <p class="text-right"><a href="" class="btn btn-link">Registrate gratis!</a></p>
           <h2>Ingreso al Sistema</h2>
           {{ Form::open(array('id'=>'formLogin','onsubmit'=>'Login.entrar();return false;')) }}

@@ -56,9 +56,13 @@ Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
 Route::post('Panel/Ofertas/AgregarBD',array('uses'=>'OfertaController@AgregarBD'));
 
 /*Yeto*/
-Route::get('/Panel/reiniciar_password', function()
+Route::get('/Panel/ReiniciarPassword', function()
 {
-	return View::make('Panel.Usuario.reiniciarpassword');
+	return View::make('Panel.Usuario.ReiniciarPassword');
+});
+Route::get('/AdquirirPlan', function()
+{
+	return View::make('Plan.AdquirirPlan');
 });
 
 /*Jorge*/

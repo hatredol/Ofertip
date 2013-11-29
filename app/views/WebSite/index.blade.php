@@ -28,7 +28,7 @@
 		            <li class="active"><a href="#funcionamiento"><span data-hover="¿Como Funciona?">¿Como Funciona?</span></a></li>
 		            <li><a href="#beneficios"><span data-hover="Beneficios">Beneficios</span></a></li>
 		            <li><a href="#inicio"><span data-hover="Locaciones">Locaciones</span></a></li>
-		            <li><a href="#planes"><span data-hover="Planes y Precios">Planes y Precios</span></a></li>
+		            <li><a href="#planesyprecios"><span data-hover="Planes y Precios">Planes y Precios</span></a></li>
 		            <li class=""><a href="#contacto"><span data-hover="Contacto">Contacto</span></a></li>
 		            <!-- <li class=""><a href="#modalRegistro" data-toggle="modal" data->
 					  <i class="fa fa-user fa-2x"></i></a>
@@ -40,7 +40,7 @@
 		    @include('Usuario.formRegistro')
 	  	</header>
 	  	<section class="section" id="inicio" data-section="1">
-			<div style="padding: 0 15px">
+			<div class="container" style="padding: 0 15px">
 			<div class="row">
 					<div id="inicio-Derecho" class="col-md-6 text-right" >
 						<img src="http://placehold.it/350x222" alt="imagen celulares">
@@ -59,7 +59,7 @@
 				            </div>
 						</div>
 					</div>			
-					<div class="clearfix"></div>
+					
 			</div>
 			</div>
 		</section>
