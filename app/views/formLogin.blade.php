@@ -10,8 +10,9 @@
     {{HTML::script('js/bootstrap.min.js')}}
     <script type="text/javascript">
 
-    var Login = {
-      entrar: function() {
+    
+
+    function Login() {
             $.ajax({
               type: 'POST',
               url: 'Panel/Usuario/Login',
@@ -19,16 +20,15 @@
               data : $('#formLogin').serialize(),
               success: function(data)
               {
+                //redireccion
                  console.log(data);
               }
             });
-      }
     }
 
-    $('#formLogin').submit(function(event) {
-      console.log('lol');
-    });
-
+    function Test(){
+      console.log('hola');
+    }
     </script>
 </head>
 <body>
@@ -37,7 +37,7 @@
       <div class="col-md-3 col-md-offset-5 well" style="margin-top:200px;margin-bottom: 0px;border-radius:0px">
       	  <p class="text-right"><a href="" class="btn btn-link">Registrate gratis!</a></p>
           <h2>Ingreso al Sistema</h2>
-          {{ Form::open(array('url' => 'Panel/Usuario/Login','id'=>'formLogin')) }}
+          {{ Form::open(array('id'=>'formLogin','onsubmit'=>'Login();return false;')) }}
               <div class="form-group">
                 <label for="email">Usuario:</label>
                 <input type="text" class="form-control input-lg" name="usuario" placeholder="Ingresa tu email">
@@ -52,7 +52,7 @@
                 </label>
                 
               </div>
-              	<a onclick="Login.entrar()" class="btn btn-default">Entrar</a>
+                {{Form::submit('Enviar', ['class' => 'btn btn-default'])}}
               	<a href="" class="btn btn-link">Olvidaste tu contrase&ntilde;a?</a>
 	         {{ Form::close() }}
 	            
