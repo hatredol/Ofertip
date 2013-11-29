@@ -47,12 +47,13 @@ class UsuarioController extends BaseController implements IPostMantenimiento,IGe
 			'password'=>Input::get('password'));
 		if(Auth::attempt($Usuario,true))
 		{
-			$UsuarioLogeado = Auth::user();
-			return UsuarioController::BuscarTiendasPorUsuario($UsuarioLogeado->idUsuario);
+			/*$UsuarioLogeado = Auth::user();
+			return UsuarioController::BuscarTiendasPorUsuario($UsuarioLogeado->idUsuario);*/
+			return Response::json(array('indicadorLogin' => 'Verdadero'));
 		}
 		else
 		{
-			echo die(var_dump($Usuario));
+			return Response::json(array('indicadorLogin' => 'Falso'));
 		}
 	}
 
