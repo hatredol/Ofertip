@@ -57,11 +57,11 @@
     
               <div class="form-group">
                 <label for="email">Usuario:</label>
-                <input type="text" class="form-control" name="usuario" placeholder="Ingresa tu email">
+                <input type="text" class="form-control input-lg" name="usuario" placeholder="Ingresa tu email">
               </div>
               <div class="form-group">
                 <label for="password">Contrase&ntilde;a:</label>
-                <input type="password" class="form-control" name="password" placeholder="Escribe tu Contrase&ntilde;a">
+                <input type="password" class="form-control input-lg" name="password" placeholder="Escribe tu Contrase&ntilde;a">
               </div>
               
               <div class="checkbox">
