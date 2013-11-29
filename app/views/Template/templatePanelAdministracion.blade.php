@@ -80,32 +80,32 @@
 								<!-- END RESPONSIVE QUICK SEARCH FORM -->
 							</li>
 							<li class="start active ">
-								<a href="/public/Panel/Usuario">
+								<a href="{{URL::to('Panel/Usuario')}}">
 								<i class="fa fa-home"></i> 
 								<span class="title">Inicio</span>
 								<span class="selected"></span>
 								</a>
 							</li>
 							<li class="">
-								<a href="/public/Panel/Ofertas">
+								<a href="{{URL::to('Panel/Ofertas')}}">
 								<i class="fa fa-briefcase"></i> 
 								<span class="title">Ofertas</span>
 								</a>
 							</li>
 							<li class="">
-								<a href="/public/Panel/Suscritos">
+								<a href="{{URL::to('Panel/Suscritos')}}">
 								<i class="fa fa-cogs"></i> 
 								<span class="title">Suscritos</span>
 								</a>
 							</li>
 							<li class="">
-								<a href="/public/Panel/Codigos">
+								<a href="{{URL::to('Panel/Codigos')}}">
 								<i class="fa fa-cogs"></i> 
 								<span class="title">Codigos de Oferta</span>
 								</a>
 							</li>
 							<li class="">
-								<a href="/public/Panel/Reportes">
+								<a href="{{URL::to('Panel/Reportes')}}">
 								<i class="fa fa-gift"></i> 
 								<span class="title">Reportes</span>
 								</a>
