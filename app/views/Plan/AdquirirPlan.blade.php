@@ -34,13 +34,11 @@
 							  	<label for="horarioTienda">Horario de atencion:</label>
               					<textarea rows="4" cols="50" name="horarioTienda" style="resize:none"></textarea>
 							  </div>
-							  	<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 						        <button type="submit" class="btn btn-default">Guardar</button>
 					    </div>
-					     	{{ Form::close() }}
+					    		{{ Form::close() }}
 
-
-					     	
 		    </div>
 		    <div class="row">
 		    	<h3>Resumen de Plan</h3>
