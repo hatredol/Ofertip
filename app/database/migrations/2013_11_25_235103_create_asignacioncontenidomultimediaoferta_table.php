@@ -96,6 +96,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idCategoriaTienda')->references('idCategoriaTienda')->on('CategoriaTienda');
 			$table->foreign('idUsuario')->references('idUsuario')->on('Usuario');
 		});
+
 		Schema::create('Oferta', function(Blueprint $table) {
 			$table->engine ='InnoDB';
 			$table->increments('idOferta');
@@ -111,6 +112,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->timestamp('fechaCreacionOferta')->default(DB::raw('CURRENT_TIMESTAMP'))->nullable();
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
 		});
+
 		Schema::create('Plan', function(Blueprint $table) {
 			$table->engine ='InnoDB';
 			$table->increments('idPlan');
@@ -122,6 +124,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
 			$table->foreign('idTipoPlan')->references('idTipoPlan')->on('TipoPlan');
 		});
+
 		Schema::create('Suscripcion', function(Blueprint $table) {
 			$table->engine ='InnoDB';
 			$table->increments('idSuscripcion');
@@ -130,6 +133,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idCliente')->references('idCliente')->on('Cliente');
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
 		});
+
 		Schema::create('TokenOferta', function(Blueprint $table) {
 			$table->engine ='InnoDB';
 			$table->increments('idTokenOferta');
@@ -140,6 +144,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idOferta')->references('idOferta')->on('Oferta');
 			$table->foreign('idSuscripcion')->references('idSuscripcion')->on('Suscripcion');
 		});
+
 		Schema::create('ContenidoMultimediaOferta', function(Blueprint $table) {
 			$table->engine ='InnoDB';
 			$table->increments('idAsignacionContenidoMultimediaOferta');
@@ -148,11 +153,20 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idContenidoMultimedia')->references('idContenidoMultimedia')->on('ContenidoMultimedia');
 			$table->foreign('idOferta')->references('idOferta')->on('Oferta');
 		});
+
 		Schema::create('ContenidoMultimediaTienda', function(Blueprint $table) {
 			$table->engine ='InnoDB';
 			$table->increments('idAsignacionContenidoMultimediaTienda');
 			$table->unsignedInteger('idContenidoMultimedia');
 			$table->unsignedInteger('idTienda');
+			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
+			$table->foreign('idContenidoMultimedia')->references('idContenidoMultimedia')->on('ContenidoMultimedia');
+		});
+
+		Schema::create('TagsTienda', function(Blueprint $table) {
+			$table->engine ='InnoDB';
+			$table->unsignedInteger('idTienda');
+			$table->string('nombreTags');
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
 			$table->foreign('idContenidoMultimedia')->references('idContenidoMultimedia')->on('ContenidoMultimedia');
 		});

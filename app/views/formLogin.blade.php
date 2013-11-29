@@ -54,7 +54,6 @@
       	  <p class="text-right"><a href="" class="btn btn-link">Registrate gratis!</a></p>
           <h2>Ingreso al Sistema</h2>
           {{ Form::open(array('url' => 'Panel/Usuario/Login','id'=>'formLogin')) }}
-    
               <div class="form-group">
                 <label for="email">Usuario:</label>
                 <input type="text" class="form-control input-lg" name="usuario" placeholder="Ingresa tu email">
@@ -63,16 +62,15 @@
                 <label for="password">Contrase&ntilde;a:</label>
                 <input type="password" class="form-control input-lg" name="password" placeholder="Escribe tu Contrase&ntilde;a">
               </div>
-              
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Recordar contrase&ntilde;a
+                  <input type="checkbox">Recordar contrase&ntilde;a
                 </label>
                 
               </div>
               	<a onclick="Login()" class="btn btn-default">Entrar</a>
               	<a href="" class="btn btn-link">Olvidaste tu contrase&ntilde;a?</a>
-	            {{ Form::close() }}
+	         {{ Form::close() }}
 	            
       </div>
       
