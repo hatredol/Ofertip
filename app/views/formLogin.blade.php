@@ -7,6 +7,7 @@
     {{HTML::style('css/bootstrap.min.css')}}
     {{HTML::style('css/bootstrap-theme.min.css')}}
     {{HTML::script('http://codeorigin.jquery.com/jquery-2.0.3.min.js')}}
+    {{HTML::script('http://code.jquery.com/ui/1.10.3/jquery-ui.js')}}
     {{HTML::script('js/bootstrap.min.js')}}
     <script type="text/javascript">
 
@@ -19,18 +20,20 @@
               data : $('#formLogin').serialize(),
               success: function(data)
               {
-                //redireccion
-                 console.log(data);
+                if(data.indicadorLogin == 'Falso') {
+                  $("#formLogin").effect("shake", { times: (4) }, 150);
+                } else {
+                  window.location ="/Panel/dashboard";
+                }
               }
             });
+        },
+      ResetFRM: function() {
+        $('#ResetFRM').slideToggle();
       }
     }
 
   
-
-    function Test(){
-      console.log('hola');
-    }
     </script>
 </head>
 <body>
@@ -55,13 +58,13 @@
                 
               </div>
                 {{Form::submit('Enviar', ['class' => 'btn btn-default'])}}
-              	<a href="" class="btn btn-link">Olvidaste tu contrase&ntilde;a?</a>
+              	<a href="#" onclick="Login.ResetFRM(); return false;" class="btn btn-link">Olvidaste tu contrase&ntilde;a?</a>
 	         {{ Form::close() }}
 	            
       </div>
       
     </div>
-    <div class="row" style="margin-top: 0px">
+    <div class="row" style="margin-top: 0px; display: none" id="ResetFRM">
 	    <div class="col-md-3 col-md-offset-5 well" style="border-top-right-radius: 0px; border-top-left-radius:  0px;border-bottom-right-radius: 10px; border-bottom-left-radius:  10px;" >
 	      	<form>
 	      		<small style="margin-bottom: 20px">Si has olvidado tu contrase&ntilde;a, escribe tu mail para recuperarla, ¡AQUI!</small>
