@@ -10,9 +10,8 @@
     {{HTML::script('js/bootstrap.min.js')}}
     <script type="text/javascript">
 
-    
-
-    function Login() {
+    var Login = {
+      entrar: function() {
             $.ajax({
               type: 'POST',
               url: 'Panel/Usuario/Login',
@@ -24,7 +23,10 @@
                  console.log(data);
               }
             });
+      }
     }
+
+  
 
     function Test(){
       console.log('hola');
@@ -37,7 +39,7 @@
       <div class="col-md-3 col-md-offset-5 well" style="margin-top:200px;margin-bottom: 0px;border-radius:0px">
       	  <p class="text-right"><a href="" class="btn btn-link">Registrate gratis!</a></p>
           <h2>Ingreso al Sistema</h2>
-          {{ Form::open(array('id'=>'formLogin','onsubmit'=>'Login();return false;')) }}
+          {{ Form::open(array('id'=>'formLogin','onsubmit'=>'Login.entrar();return false;')) }}
               <div class="form-group">
                 <label for="email">Usuario:</label>
                 <input type="text" class="form-control input-lg" name="usuario" placeholder="Ingresa tu email">
