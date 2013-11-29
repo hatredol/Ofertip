@@ -80,10 +80,11 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->unsignedInteger('idTipoUsuario');
 			$table->string('usuario', 45)->nullable();
 			$table->string('password', 60)->nullable();
+			$table->string('emailUsuario', 150)->nullable();
 			$table->string('indicadorActivo', 1)->default('A')->nullable();
 			$table->foreign('idTipoUsuario')->references('idTipoUsuario')->on('TipoUsuario');
 		});
-		
+
 		Schema::create('Tienda', function(Blueprint $table) {
 			$table->engine ='InnoDB';
 			$table->unsignedInteger('idTienda');
@@ -99,12 +100,14 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->engine ='InnoDB';
 			$table->increments('idOferta');
 			$table->unsignedInteger('idTienda');
+			$table->string('nombreOferta', 200)->nullable();
 			$table->text('descripcionOferta')->nullable();
 			$table->decimal('precioNormalOferta')->nullable();
 			$table->decimal('precioOferta')->nullable();
 			$table->decimal('precioOfertaSuscripcion')->nullable();
 			$table->datetime('fechaInicioOferta')->nullable();
 			$table->datetime('fechaTerminoOferta')->nullable();
+			$table->string('indicadorActivo', 1)->default('A')->nullable();
 			$table->timestamp('fechaCreacionOferta')->default(DB::raw('CURRENT_TIMESTAMP'))->nullable();
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
 		});
@@ -115,7 +118,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->unsignedInteger('idTipoPlan');
 			$table->datetime('fechaInicioPlan')->nullable();
 			$table->datetime('fechaTerminoPlan')->nullable();
-			$table->string('indicadorPlan', 1)->default('A')->nullable();
+			$table->string('indicadorActivo', 1)->default('A')->nullable();
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
 			$table->foreign('idTipoPlan')->references('idTipoPlan')->on('TipoPlan');
 		});

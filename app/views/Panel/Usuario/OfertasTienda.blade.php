@@ -16,34 +16,19 @@
 			                    </tr>
 			                  </thead>
 			                  <tbody>
+			                  @foreach($ofertas as $oferta)	
 			                    <tr>
+			                      @if($oferta->indicadorActivo = 'A')	
 			                      <td><span class="label label-sm label-success label-mini" style="font-size:0.8em; font-weight:normal">Disponible</span></td>
-			                      <td>Pizza Vegetariana</td>
-			                      <td>Pizza vegetariana a S/.30.00</td>
-			                      <td>27/11/2013</td>
+			                      @else
+			                      <td><span class="label label-sm label-success label-mini" style="font-size:0.8em; font-weight:normal">Terminada</span></td>
+			                      @endif
+			                      <td>{{$oferta->nombreOferta}}</td>
+			                      <td>{{$oferta->descripcionOferta}}</td>
+			                      <td>{{$oferta->fechaInicioOferta}}</td>
 			                      <td>12</td>
 			                    </tr>
-			                    <tr>
-			                      <td><span class="label label-sm label-danger" style="font-size:0.8em; font-weight:normal">Terminada</span></td>
-			                      <td>Pizza Vegetariana</td>
-			                      <td>Pizza vegetariana a S/.30.00</td>
-			                      <td>27/11/2013</td>
-			                      <td>12</td>
-			                    </tr>
-			                    <tr>
-			                      <td><span class="label label-sm label-danger" style="font-size:0.8em; font-weight:normal">Terminada</span></td>
-			                      <td>Pizza Vegetariana</td>
-			                      <td>Pizza vegetariana a S/.30.00</td>
-			                      <td>27/11/2013</td>
-			                      <td>12</td>
-			                    </tr>
-			                    <tr>
-			                      <td><span class="label label-sm label-danger" style="font-size:0.8em; font-weight:normal">Terminada</span></td>
-			                      <td>Pizza Vegetariana</td>
-			                      <td>Pizza vegetariana a S/.30.00</td>
-			                      <td>27/11/2013</td>
-			                      <td>12</td>
-			                    </tr>
+			                  @endforeach  
 			                  </tbody>
 			                </table>
 			                <button type="button" class="btn btn-primary" style="padding:15px 60px">

@@ -26,10 +26,7 @@ Route::get('Panel/Usuario', function()
 {
 	return View::make('Panel.Usuario.PanelAdministracionUsuario');
 });
-Route::get('Panel/Ofertas', function()
-{
-	return View::make('Panel.Usuario.OfertasTienda');
-});
+Route::get('Panel/Ofertas', array('uses'=>'OfertaController@ListarTodo'));
 Route::get('Panel/Suscritos', function()
 {
 	return View::make('Panel.Usuario.SuscritosTienda');
@@ -56,7 +53,7 @@ Route::get('/Panel/dashboard', function()
 /*Charlie*/
 Route::post('Panel/Usuario/AgregarBD',array('uses'=>'UsuarioController@AgregarBD'));
 Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
-
+Route::post('Panel/Ofertas/AgregarBD',array('uses'=>'OfertaController@AgregarBD'));
 
 /*Yeto*/
 Route::get('/Panel/reiniciar_password', function()
