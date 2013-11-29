@@ -164,12 +164,12 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->foreign('idContenidoMultimedia')->references('idContenidoMultimedia')->on('ContenidoMultimedia');
 		});
 
-		Schema::create('TagsTienda', function(Blueprint $table) {
+		Schema::create('TagTienda', function(Blueprint $table) {
 			$table->engine ='InnoDB';
+			$table->increments('idTagTienda');
 			$table->unsignedInteger('idTienda');
 			$table->string('nombreTags');
 			$table->foreign('idTienda')->references('idTienda')->on('Tienda');
-			$table->foreign('idContenidoMultimedia')->references('idContenidoMultimedia')->on('ContenidoMultimedia');
 		});
 	}
 

@@ -11,10 +11,6 @@
 							    <input type="text" class="form-control" name="nombrePersonaJuridica" placeholder="Razon Social o Nombre de la empresa">
 							  </div>
 							  <div class="form-group">
-							    <label for="RUC">RUC:</label>
-							    <input type="text" class="form-control" name="RUC" placeholder="RUC">
-							  </div>
-							  <div class="form-group">
 							    <label for="direccionPersonaJuridica">Direccion:</label>
 							    <input type="text" class="form-control" name="direccionPersonaJuridica" placeholder="Direccion del local">
 							  </div>
@@ -38,13 +34,10 @@
 							  	<label for="horarioTienda">Horario de atencion:</label>
               					<textarea rows="4" cols="50" name="horarioTienda" style="resize:none"></textarea>
 							  </div>
-							  	<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 						        <button type="submit" class="btn btn-default">Guardar</button>
 					    </div>
-					     	{{ Form::close() }}
-
-
-					     	
+					    		{{ Form::close() }}
 		    </div>
 		    <div class="row">
 		    	<h3>Resumen de Plan</h3>
