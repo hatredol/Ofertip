@@ -67,12 +67,22 @@
               					<textarea rows="4" cols="50" name="descripcionOferta" style="resize:none"></textarea>
 							  </div>
 							  <div class="form-group">
+							  <label for="tipoMoneda">Tipo de Moneda para oferta</label>
+							  <select id="tipoMoneda">
+									<option value="S/.">(S/.)Nuevo Sol</option>
+									<option value="$">($)Dolar Americano</option>
+									
+								</select>
+							 </div>
+							  <div class="form-group">
 							    <label for="precioNormalOferta">Precio Normal:</label>
 							    <input type="text" class="form-control" name="precioNormalOferta" placeholder="Precio normal del producto">
 							  </div>
 							  <div class="form-group">
+							  	
 							    <label for="precioOferta">Precio de Oferta:</label>
-							    <input type="text" class="form-control" name="precioOferta" placeholder="Precio de oferta del producto">
+							    
+								<input type="text" class="form-control" name="precioOferta" placeholder="Precio de oferta del producto">
 							  </div>
 							  <div class="form-group">
 							    <label for="precioOfertaSuscripcion">Precio de Oferta por Suscripcion:</label>
