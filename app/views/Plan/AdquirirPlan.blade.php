@@ -38,8 +38,6 @@
 						        <button type="submit" class="btn btn-default">Guardar</button>
 					    </div>
 					    		{{ Form::close() }}
-
-
 		    </div>
 		    <div class="row">
 		    	<h3>Resumen de Plan</h3>
