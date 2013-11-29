@@ -39,6 +39,7 @@
 					    </div>
 					    		{{ Form::close() }}
 
+
 		    </div>
 		    <div class="row">
 		    	<h3>Resumen de Plan</h3>
