@@ -11,6 +11,10 @@
 							    <input type="text" class="form-control" name="nombrePersonaJuridica" placeholder="Razon Social o Nombre de la empresa">
 							  </div>
 							  <div class="form-group">
+							    <label for="RUC">RUC:</label>
+							    <input type="text" class="form-control" name="RUC" placeholder="RUC">
+							  </div>
+							  <div class="form-group">
 							    <label for="direccionPersonaJuridica">Direccion:</label>
 							    <input type="text" class="form-control" name="direccionPersonaJuridica" placeholder="Direccion del local">
 							  </div>

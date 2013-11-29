@@ -48,6 +48,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->string('nombrePersonaJuridica', 100)->nullable();
 			$table->string('direccionPersonaJuridica', 100)->nullable();
 			$table->string('telefonoPersonaJuridica', 45)->nullable();
+			$table->string('RUC', 11)->nullable();
 			$table->primary('idPersonaJuridica');
 			$table->foreign('idPersonaJuridica')->references('idPersona')->on('Persona');
 		});
