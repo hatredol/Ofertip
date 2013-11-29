@@ -59,7 +59,10 @@ Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
 
 
 /*Yeto*/
-
+Route::get('/Panel/reiniciar_password', function()
+{
+	return View::make('Panel.Usuario.reiniciarpassword');
+});
 
 /*Jorge*/
 
