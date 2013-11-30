@@ -54,16 +54,13 @@ Route::get('/Panel/dashboard', function()
 Route::post('Panel/Usuario/AgregarBD',array('uses'=>'UsuarioController@AgregarBD'));
 Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
 Route::post('Panel/Ofertas/AgregarBD',array('uses'=>'OfertaController@AgregarBD'));
-
+Route::post('AdquirirPlan/AgregarBD',array('uses'=>'TiendaController@AgregarBD'));
 /*Yeto*/
 Route::get('/Panel/ReiniciarPassword', function()
 {
 	return View::make('Panel.Usuario.ReiniciarPassword');
 });
-Route::get('/AdquirirPlan', function()
-{
-	return View::make('Plan.AdquirirPlan');
-});
+Route::get('/AdquirirPlan', array('uses'=>'TiendaController@Registrar'));
 
 /*Jorge*/
 

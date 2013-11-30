@@ -4,7 +4,8 @@ use App\Controllers\Interfaces\IPostMantenimiento;
 class PersonaController extends BaseController implements IPostMantenimiento{
 
 	public static function AgregarBD(){
-		Persona::create(AsignarValoresPost());
+		$Persona = Persona::create(AsignarValoresPost());
+		return $Persona->idPersona;
 	}
 	public static function ModificarBD($idRegistro){
 		$persona = Persona::find($idRegistro);
@@ -13,7 +14,7 @@ class PersonaController extends BaseController implements IPostMantenimiento{
 		return $persona;
 	}
 	public static function AsignarValoresPost(){
-		array();
+		return array();
 	}
 
 }

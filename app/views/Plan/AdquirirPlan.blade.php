@@ -5,7 +5,7 @@
 				
 				<h3>Detalles de la Empresa</h3>
 		            	<div class="col-md-6 well">
-		            		{{ Form::open(array('url' => 'Panel/Usuario/AgregarBD')) }}
+		            		{{ Form::open(array('url' => 'AdquirirPlan/AgregarBD')) }}
 							  <div class="form-group">
 							    <label for="nombrePersonaJuridica">Razon Social:</label>
 							    <input type="text" class="form-control" name="nombrePersonaJuridica" placeholder="Razon Social o Nombre de la empresa">

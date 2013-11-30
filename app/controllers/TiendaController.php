@@ -5,7 +5,9 @@ use App\Controllers\Interfaces\IGetMantenimiento;
 class TiendaController extends BaseController implements IPostMantenimiento,IGetMantenimiento{
 
 	public static function AgregarBD(){
-		Tienda::create(AsignarValoresPost());
+		$idPersona = PersonaController::AgregarBD();
+		$idPersonaJuridica = PersonaJuridicaController::AgregarBD($idPersona);
+		Tienda::create(TiendaController::AsignarValoresPost($idPersonaJuridica));
 	}
 	public static function ModificarBD($idRegistro){
 		$Tienda = Tienda::find($idRegistro);
@@ -13,16 +15,18 @@ class TiendaController extends BaseController implements IPostMantenimiento,IGet
 		$Tienda->save();
 		return $Tienda;
 	}
-	public static function AsignarValoresPost(){
-		array(
-			'idCategoriaTienda'=>Input::get('idCategoriaTienda'),
+	public static function AsignarValoresPost($idPersonaJuridica){
+		return array(
+			'idCategoriaTienda'=>$idPersonaJuridica,
 			'idUsuario'=>Input::get('idUsuario'),
 			'descripcionTienda'=>Input::get('descripcionTienda'),
 			'horarioTienda'=>Input::get('horarioTienda'));
 	}
 
 	public static function Registrar(){
-		return View::make('');
+		$CategoriasTienda = CategoriaTienda::all();
+		return View::make('Plan.AdquirirPlan')
+		->with('categoriastienda',$CategoriasTienda);
 	}
 
 	public static function Editar($idRegistro){
