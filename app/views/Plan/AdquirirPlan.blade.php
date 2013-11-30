@@ -32,7 +32,7 @@
 							  </div>
 							  <div class="form-group">
 							  	<label for="tag" class="label-tienda">Tags:</label>
-              					<input name="tags" id="myTags" value="fancy, new, tag, demo">
+              					<input name="tags" id="myTags" class="tagit-hidden-field">
               				  </div>	
 							  <div class="form-group">
 							  	<label for="descripcionTienda">Descripcion de la tienda:</label>
@@ -69,7 +69,7 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			    $(document).ready(function() {
+			    $(function() {
 			        $("#myTags").tagit();
 			    });
 	    </script>

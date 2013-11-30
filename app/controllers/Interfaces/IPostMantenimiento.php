@@ -16,5 +16,5 @@ interface IPostMantenimiento {
 	*/
 	public static function AgregarBD();
 	public static function ModificarBD($idRegistro);
-	public static function AsignarValoresPost();
+	public static function AsignarValoresPost($idRegistro);
 }
