@@ -44,10 +44,7 @@ Route::get('Panel/Perfil', function()
 {
 	return View::make('Panel.Usuario.PerfilUsuario');
 });
-Route::get('/Panel/dashboard', function()
-{
-	return View::make('Panel.Usuario.dashboard');
-});
+Route::get('/Panel/dashboard', array('uses'=>'UsuarioController@MostrarDashboard'));
 
 
 /*Charlie*/
@@ -55,12 +52,16 @@ Route::post('Panel/Usuario/AgregarBD',array('uses'=>'UsuarioController@AgregarBD
 Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
 Route::post('Panel/Ofertas/AgregarBD',array('uses'=>'OfertaController@AgregarBD'));
 Route::post('AdquirirPlan/AgregarBD',array('uses'=>'TiendaController@AgregarBD'));
+Route::get('Panel/{urlTienda}',array('uses'=>'TiendaController@MostrarPanel'));
+Route::get('Panel/{urlTienda}/Ofertas',array('uses'=>'TiendaController@MostrarOfertas'));
+
 /*Yeto*/
 Route::get('/Panel/ReiniciarPassword', function()
 {
 	return View::make('Panel.Usuario.ReiniciarPassword');
 });
 Route::get('/AdquirirPlan', array('uses'=>'TiendaController@Registrar'));
+Route::get('/AdquirirPlan/AgregarBD', array('uses'=>'TiendaController@AgregarBD'));
 
 /*Jorge*/
 

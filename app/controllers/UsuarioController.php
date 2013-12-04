@@ -18,7 +18,7 @@ class UsuarioController extends BaseController implements IPostMantenimiento,IGe
 
 	}
 	
-	public static function AsignarValoresPost(){
+	public static function AsignarValoresPost($idRegistro){
 		return array(
 				'idTipoUsuario'=> '1',
 				'usuario'=>Input::get('usuario'),
@@ -61,12 +61,18 @@ class UsuarioController extends BaseController implements IPostMantenimiento,IGe
 		Auth::logout();
 	}
 
+	public static function MostrarDashboard(){
+		$tiendas = UsuarioController::BuscarTiendasPorUsuario(Auth::user()->idUsuario);
+		return View::make('Panel.Usuario.dashboard')
+			->with('tiendas',$tiendas);
+	}
+
 	public static function BuscarTiendasPorUsuario($idUsuario){
 		return DB::table('Tienda')
             ->join('PersonaJuridica', 'PersonaJuridica.idPersonaJuridica', '=', 'Tienda.idTienda')
             ->join('Persona','Persona.idPersona','=','PersonaJuridica.idPersonaJuridica')
             ->whereRAW('Tienda.idUsuario = '.$idUsuario)
-            ->select( 'PersonaJuridica.nombrePersonaJuridica','Persona.indicadorActivo')
+            ->select( 'Tienda.urlTienda','PersonaJuridica.nombrePersonaJuridica','Persona.indicadorActivo')
             ->get();
 	}
 

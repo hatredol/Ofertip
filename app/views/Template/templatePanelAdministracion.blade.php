@@ -23,7 +23,7 @@
 			<a class="navbar-brand" href="index.html">
 			<img src="{{URL::asset('img/logo.png')}}" alt="logo" class="img-responsive" width="20%">
 			</a>
-			<p style="color:#fff">Nombre de Tienda</p>
+			<p style="color:#fff">{{$tienda->nombrePersonaJuridica}}</p>
 			<!-- END LOGO -->
 			<!-- BEGIN RESPONSIVE MENU TOGGLER --> 
 			<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -88,7 +88,7 @@
 								</a>
 							</li>
 							<li class="">
-								<a href="{{URL::to('Panel/Ofertas')}}">
+								<a href="{{URL::to('Panel/'.$tienda->urlTienda.'/Ofertas')}}">
 								<i class="fa fa-briefcase"></i> 
 								<span class="title">Ofertas</span>
 								</a>

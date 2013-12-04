@@ -5,15 +5,15 @@ use App\Controllers\Interfaces\IGetMantenimiento;
 class OfertaController extends BaseController implements IPostMantenimiento,IGetMantenimiento{
 
 	public static function AgregarBD(){
-		Oferta::create(AsignarValoresPost());
+		Oferta::create(OfertaController::AsignarValoresPost());
 	}
 	public static function ModificarBD($idRegistro){
 		$Oferta = Oferta::find($idRegistro);
-		$Oferta->fill(OfertaController::AsignarValoresPost());
+		$Oferta->fill(OfertaController::AsignarValoresPost(array()));
 		$Oferta->save();
 		return $Oferta;
 	}
-	public static function AsignarValoresPost(){
+	public static function AsignarValoresPost($idRegistro){
 		return array(
 			'idTienda'=>Input::get('idTienda'),
 			'nombreOferta'=>Input::get('nombreOferta'),
@@ -45,6 +45,10 @@ class OfertaController extends BaseController implements IPostMantenimiento,IGet
 		$Oferta->load('personajuridica');
 		$Oferta->load('persona');
 		return $Oferta;
+	}
+
+	public static function BuscarOfertas($idTienda){
+		return Oferta::where('idTienda','=',$idTienda)->get();
 	}
 
 }

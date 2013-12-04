@@ -93,6 +93,7 @@ class CreateAsignacionContenidoMultimediaOfertaTable extends Migration {
 			$table->unsignedInteger('idUsuario');
 			$table->text('descripcionTienda')->nullable();
 			$table->string('horarioTienda', 100)->nullable();
+			$table->string('urlTienda', 150)->nullable();
 			$table->primary('idTienda');
 			$table->foreign('idCategoriaTienda')->references('idCategoriaTienda')->on('CategoriaTienda');
 			$table->foreign('idUsuario')->references('idUsuario')->on('Usuario');

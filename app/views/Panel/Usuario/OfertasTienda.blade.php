@@ -44,7 +44,7 @@
 					</div>
 					<div class="row">
 		            	<div class="col-md-6">
-		            		{{ Form::open(array('url' => 'Panel/Usuario/AgregarBD')) }}
+		            		{{ Form::open(array('url' => 'Panel/Ofertas/AgregarBD')) }}
 							  <div class="form-group">
 							    <label for="tituloOferta">Titulo de Oferta:</label>
 							    <input type="text" class="form-control" name="tituloOferta" placeholder="Titulo de la oferta">
@@ -58,7 +58,6 @@
 							  <select id="tipoMoneda">
 									<option value="S/.">(S/.)Nuevo Sol</option>
 									<option value="$">($)Dolar Americano</option>
-									
 								</select>
 							 </div>
 							  <div class="form-group">
@@ -77,11 +76,11 @@
 							  </div>
 							  <div class="form-group">
 							    <label for="fechaInicioOferta">Fecha de Inicio de Oferta:</label>
-							    <input name="fechaInicioOferta" class="form-control" type="text" value="2013-02-21" size="2"><span class="add-on"><i class="icon-th"></i></span>
+							    <input name="fechaInicioOferta" class="form-control" type="date" value="2013-02-21" size="2"><span class="add-on"><i class="icon-th"></i></span>
                               </div>
                               <div class="form-group">
 							    <label for="fechaTerminoOferta">Fecha de Termino de Oferta:</label>
-							    <input name="fechaTerminoOferta" class="form-control" type="text" value="2013-02-21" size="2"><span class="add-on"><i class="icon-th"></i></span>
+							    <input name="fechaTerminoOferta" class="form-control" type="date" value="2013-02-21" size="2"><span class="add-on"><i class="icon-th"></i></span>
                               </div>
 							  
 							  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>

@@ -7,12 +7,9 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		    {{HTML::style('css/bootstrap.min.css')}}
 		    {{HTML::style('css/bootstrap-theme.min.css')}}
-		    {{HTML::style('css/estilos.css')}}
 		    {{HTML::style('css/dashboard.css')}}
-
 		    {{HTML::style('font-awesome/css/font-awesome.css')}}
 		    {{HTML::script('http://codeorigin.jquery.com/jquery-2.0.3.min.js')}}
-		    
 		    {{HTML::style('http://fonts.googleapis.com/css?family=Oxygen')}}
 		    
 	</head>
@@ -85,51 +82,15 @@
 					</div>
 					<div id="listaDash" class="col-md-12">
 						<ul>
-
+							@foreach($tiendas as $tienda)
 							<li class="col-md-3 clearfix">
-		                        <a href="" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
-		                            Tienda Comercial
+		                        <a href="{{URL::to('Panel/'.$tienda->urlTienda)}}" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
+		                            {{$tienda->nombrePersonaJuridica}}
 		                            <span class="img"><img src="https://www.markacomercial.com/static/img/tiendatemplate1.jpg" width="100%">
 		                            </span>
 		                        </a>
 	                    	</li>
-	                    	<li class="col-md-3 clearfix">
-		                        <a href="" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
-		                            Tienda Comercial
-		                            <span class="img"><img src="https://www.markacomercial.com/static/img/tiendatemplate1.jpg" width="100%">
-		                            </span>
-		                        </a>
-	                    	</li>
-	                    	<li class="col-md-3 clearfix">
-		                        <a href="" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
-		                            Tienda Comercial
-		                            <span class="img"><img src="https://www.markacomercial.com/static/img/tiendatemplate1.jpg" width="100%">
-		                            </span>
-		                        </a>
-	                    	</li>
-	                    	<li class="col-md-3 clearfix">
-		                        <a href="" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
-		                            Tienda Comercial
-		                            <span class="img"><img src="https://www.markacomercial.com/static/img/tiendatemplate1.jpg" width="100%">
-		                            </span>
-		                        </a>
-	                    	</li>
-	                    	<li class="col-md-3 clearfix">
-		                        <a href="" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
-		                            Tienda Comercial
-		                            <span class="img"><img src="https://www.markacomercial.com/static/img/tiendatemplate1.jpg" width="100%">
-		                            </span>
-		                        </a>
-	                    	</li>
-	                    	<li class="col-md-3 clearfix">
-		                        <a href="" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
-		                            Tienda Comercial
-		                            <span class="img"><img src="https://www.markacomercial.com/static/img/tiendatemplate1.jpg" width="100%">
-		                            </span>
-		                        </a>
-	                    	</li>
-
-
+	                    	@endforeach
 	                    </ul>
 					</div>
 

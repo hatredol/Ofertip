@@ -11,8 +11,8 @@
 							    <input type="text" class="form-control" name="nombrePersonaJuridica" placeholder="Razon Social o Nombre de la empresa">
 							  </div>
 							  <div class="form-group">
-							    <label for="direccionPersonaJuridica">RUC:</label>
-							    <input type="text" class="form-control" name="rucPersonaJuridica" placeholder="Ruc de la Empresa">
+							    <label for="RUC">RUC:</label>
+							    <input type="text" class="form-control" name="RUC" placeholder="Ruc de la Empresa">
 							  </div>
 							  <div class="form-group">
 							    <label for="direccionPersonaJuridica">Direccion:</label>
@@ -25,9 +25,9 @@
 							  <div class="form-group">
 							  <label for="idCategoriaTienda">Categoria de su tienda:</label>
 							  <select name="idCategoriaTienda">
-							  	<option>Categoria 1</option>
-							  	<option>Categoria 2</option>
-							  	<option>Categoria 3</option>
+							  	@foreach($categoriastienda as $categoria)
+							  	<option value="{{$categoria->idCategoriaTienda}}">{{$categoria->nombreCategoriaTienda}}</option>
+							  	@endforeach
 							  </select>
 							  </div>
 							  <div class="form-group">

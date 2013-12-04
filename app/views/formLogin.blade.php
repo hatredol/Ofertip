@@ -23,7 +23,7 @@
                 if(data.indicadorLogin == 'Falso') {
                   $("#formLogin").effect("shake", { times: (4) }, 150);
                 } else {
-                  window.location ="/Panel/dashboard";
+                  window.location ="{{URL::to('Panel/dashboard')}}";
                 }
               }
             });

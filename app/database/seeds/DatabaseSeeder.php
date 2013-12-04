@@ -50,6 +50,10 @@ class TipoUsuarioTableSeeder extends Seeder {
         DB::table('CategoriaTienda')->delete();
         CategoriaTienda::create(array(
         	'nombreCategoriaTienda'=>'Comida'));
+        CategoriaTienda::create(array(
+            'nombreCategoriaTienda'=>'Entretenimiento'));
+        CategoriaTienda::create(array(
+            'nombreCategoriaTienda'=>'Comercio'));
 
         DB::table('Tienda')->delete();
         Tienda::create(array(
@@ -57,11 +61,13 @@ class TipoUsuarioTableSeeder extends Seeder {
         	'idCategoriaTienda'=>'1',
         	'idUsuario'=>'1',
         	'descripcionTienda'=>'Una tienda Innovadora',
+            'urlTienda'=>'TiendaOfertip',
 			'horarioTienda'=>'Lunes-Viernes 9am-10pm'));
         Tienda::create(array(
             'idTienda'=>'2',
             'idCategoriaTienda'=>'1',
             'idUsuario'=>'1',
+            'urlTienda'=>'TiendaMarka-Comercial',
             'descripcionTienda'=>'Una tienda para el futuro de Tacna',
             'horarioTienda'=>'Lunes-Viernes 9am-10pm'));
 

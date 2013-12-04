@@ -5,9 +5,9 @@ use App\Controllers\Interfaces\IGetMantenimiento;
 class TiendaController extends BaseController implements IPostMantenimiento,IGetMantenimiento{
 
 	public static function AgregarBD(){
-		$idPersona = PersonaController::AgregarBD();
-		$idPersonaJuridica = PersonaJuridicaController::AgregarBD($idPersona);
-		Tienda::create(TiendaController::AsignarValoresPost($idPersonaJuridica));
+		$idRegistro = PersonaJuridicaController::AgregarBD();
+		$idRegistro['idPersonaJuridica'] = $idRegistro["idPersona"];
+		Tienda::create(TiendaController::AsignarValoresPost($idRegistro));
 	}
 	public static function ModificarBD($idRegistro){
 		$Tienda = Tienda::find($idRegistro);
@@ -15,10 +15,11 @@ class TiendaController extends BaseController implements IPostMantenimiento,IGet
 		$Tienda->save();
 		return $Tienda;
 	}
-	public static function AsignarValoresPost($idPersonaJuridica){
+	public static function AsignarValoresPost($idRegistro){
 		return array(
-			'idCategoriaTienda'=>$idPersonaJuridica,
-			'idUsuario'=>Input::get('idUsuario'),
+			'idTienda'=>$idRegistro['idPersonaJuridica'],
+			'idCategoriaTienda'=>Input::get('idCategoriaTienda'),
+			'idUsuario'=>1,
 			'descripcionTienda'=>Input::get('descripcionTienda'),
 			'horarioTienda'=>Input::get('horarioTienda'));
 	}
@@ -45,4 +46,26 @@ class TiendaController extends BaseController implements IPostMantenimiento,IGet
 		return $Tienda;
 	}
 
+	public static function MostrarPanel($urlTienda){
+	  return View::make('Panel.Usuario.PanelAdministracionUsuario')
+	         ->with('tienda', TiendaController::BuscarTienda($urlTienda));
+	}
+
+	public static function MostrarOfertas($urlTienda){
+		$tienda = TiendaController::BuscarTienda($urlTienda);
+		$ofertas = OfertaController::BuscarOfertas($tienda->idTienda);
+	  return View::make('Panel.Usuario.OfertasTienda')
+	         ->with('tienda', $tienda)
+	         ->with('ofertas',$ofertas);
+	}
+
+	public static function BuscarTienda($valor)
+	{
+		return DB::table('Tienda')
+            ->join('PersonaJuridica', 'PersonaJuridica.idPersonaJuridica', '=', 'Tienda.idTienda')
+            ->join('Persona','Persona.idPersona','=','PersonaJuridica.idPersonaJuridica')
+            ->whereRAW('Tienda.urlTienda ="'.$valor.'"')
+            ->select( 'PersonaJuridica.nombrePersonaJuridica','Tienda.idTienda','Tienda.urlTienda')
+            ->first();
+	}
 }
