@@ -52,8 +52,8 @@ Route::post('Panel/Usuario/AgregarBD',array('uses'=>'UsuarioController@AgregarBD
 Route::post('Panel/Usuario/Login',array('uses'=>'UsuarioController@Login'));
 Route::post('Panel/Ofertas/AgregarBD',array('uses'=>'OfertaController@AgregarBD'));
 Route::post('AdquirirPlan/AgregarBD',array('uses'=>'TiendaController@AgregarBD'));
-Route::get('Panel/{urlTienda}',array('uses'=>'TiendaController@MostrarPanel'));
-Route::get('Panel/{urlTienda}/Ofertas',array('uses'=>'TiendaController@MostrarOfertas'));
+Route::get('Panel/{idTienda}',array('uses'=>'TiendaController@MostrarPanel'));
+Route::get('Panel/{idTienda}/Ofertas',array('uses'=>'TiendaController@MostrarOfertas'));
 
 /*Yeto*/
 Route::get('/Panel/ReiniciarPassword', function()

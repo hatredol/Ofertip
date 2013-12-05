@@ -88,25 +88,25 @@
 								</a>
 							</li>
 							<li class="">
-								<a href="{{URL::to('Panel/'.$tienda->urlTienda.'/Ofertas')}}">
+								<a href="{{URL::to('Panel/'.$tienda->idTienda.'/Ofertas')}}">
 								<i class="fa fa-briefcase"></i> 
 								<span class="title">Ofertas</span>
 								</a>
 							</li>
 							<li class="">
-								<a href="{{URL::to('Panel/Suscritos')}}">
+								<a href="{{URL::to('Panel/'.$tienda->idTienda.'/Suscritos')}}">
 								<i class="fa fa-cogs"></i> 
 								<span class="title">Suscritos</span>
 								</a>
 							</li>
 							<li class="">
-								<a href="{{URL::to('Panel/Codigos')}}">
+								<a href="{{URL::to('Panel/'.$tienda->idTienda.'/Codigos')}}">
 								<i class="fa fa-cogs"></i> 
 								<span class="title">Codigos de Oferta</span>
 								</a>
 							</li>
 							<li class="">
-								<a href="{{URL::to('Panel/Reportes')}}">
+								<a href="{{URL::to('Panel/'.$tienda->idTienda.'/Reportes')}}">
 								<i class="fa fa-gift"></i> 
 								<span class="title">Reportes</span>
 								</a>

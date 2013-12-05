@@ -84,8 +84,8 @@
 						<ul>
 							@foreach($tiendas as $tienda)
 							<li class="col-md-3 clearfix">
-		                        <a href="{{URL::to('Panel/'.$tienda->urlTienda)}}" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
-		                            {{$tienda->nombrePersonaJuridica}}
+		                        <a href="{{URL::to('Panel/'.$tienda->idTienda)}}" style="border: 1px solid #D1AD1F; box-shadow: 1px 1px 10px rgba(179, 144, 36, 0.2); background-color: #FFE99B;">
+		                            {{$tienda->nombreTienda}}
 		                            <span class="img"><img src="https://www.markacomercial.com/static/img/tiendatemplate1.jpg" width="100%">
 		                            </span>
 		                        </a>

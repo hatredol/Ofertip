@@ -46,26 +46,16 @@ class TiendaController extends BaseController implements IPostMantenimiento,IGet
 		return $Tienda;
 	}
 
-	public static function MostrarPanel($urlTienda){
+	public static function MostrarPanel($idTienda){
 	  return View::make('Panel.Usuario.PanelAdministracionUsuario')
-	         ->with('tienda', TiendaController::BuscarTienda($urlTienda));
+	         ->with('tienda', Tienda::find($idTienda));
 	}
 
-	public static function MostrarOfertas($urlTienda){
-		$tienda = TiendaController::BuscarTienda($urlTienda);
+	public static function MostrarOfertas($idTienda){
+		$tienda = Tienda::find($idTienda);
 		$ofertas = OfertaController::BuscarOfertas($tienda->idTienda);
 	  return View::make('Panel.Usuario.OfertasTienda')
 	         ->with('tienda', $tienda)
 	         ->with('ofertas',$ofertas);
-	}
-
-	public static function BuscarTienda($valor)
-	{
-		return DB::table('Tienda')
-            ->join('PersonaJuridica', 'PersonaJuridica.idPersonaJuridica', '=', 'Tienda.idTienda')
-            ->join('Persona','Persona.idPersona','=','PersonaJuridica.idPersonaJuridica')
-            ->whereRAW('Tienda.urlTienda ="'.$valor.'"')
-            ->select( 'PersonaJuridica.nombrePersonaJuridica','Tienda.idTienda','Tienda.urlTienda')
-            ->first();
 	}
 }
