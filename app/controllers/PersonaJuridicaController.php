@@ -3,10 +3,9 @@ use App\Controllers\Interfaces\IPostMantenimiento;
 
 class PersonaJuridicaController extends BaseController implements IPostMantenimiento{
 
-	public static function AgregarBD(){
-		$idPersona = PersonaController::AgregarBD();
-		$idRegistro["idPersona"] = $idPersona;
-		$PersonaJuridica = PersonaJuridica::create(PersonaJuridicaController::AsignarValoresPost($idRegistro));
+	public static function AgregarBD($idRegistro){
+		$idPersona = PersonaController::AgregarBD(null);
+		$PersonaJuridica = PersonaJuridica::create(PersonaJuridicaController::AsignarValoresPost($idPersona));
 		return $idRegistro;
 	}
 	public static function ModificarBD($idRegistro){
@@ -15,9 +14,9 @@ class PersonaJuridicaController extends BaseController implements IPostMantenimi
 		$PersonaJuridica->save();
 		return $PersonaJuridica;
 	}
-	public static function AsignarValoresPost($idRegistro){
+	public static function AsignarValoresPost($idPersona){
 		return array(
-			'idPersonaJuridica'=>$idRegistro["idPersona"],
+			'idPersonaJuridica'=>$idPersona,
 			'nombrePersonaJuridica'=>Input::get('nombrePersonaJuridica'),
 			'direccionPersonaJuridica'=>Input::get('direccionPersonaJuridica'),
 			'telefonoPersonaJuridica'=>Input::get('telefonoPersonaJuridica'));

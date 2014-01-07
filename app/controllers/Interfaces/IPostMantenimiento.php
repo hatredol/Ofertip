@@ -14,7 +14,7 @@ interface IPostMantenimiento {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-	public static function AgregarBD();
+	public static function AgregarBD($idRegistro);
 	public static function ModificarBD($idRegistro);
 	public static function AsignarValoresPost($idRegistro);
 }
