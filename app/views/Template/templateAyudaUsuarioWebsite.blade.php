@@ -13,7 +13,7 @@
 		    {{HTML::style('css/jquery-tagit.css')}}
 		    
 			<!-- JS -->
-		    {{HTML::script('http://codeorigin.jquery.com/jquery-2.0.3.min.js')}}
+		    {{HTML::script('http://codeorigin.jquery.com/jquery-1.7.1.min.js')}}
 		    {{HTML::script('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js')}}
 
 		    {{HTML::script('js/tag-it.js')}}
