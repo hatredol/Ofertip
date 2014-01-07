@@ -11,54 +11,50 @@
 		    
 	</head>
 	<body>
-		<header>
-	        <div class="side-nav">
-	          <ul id="gn-menu" class="gn-menu-main">
-	            <li class="gn-trigger">
-	              <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-	              <nav class="gn-menu-wrapper">
-	                <div class="gn-scroller">
-	                  <ul id="main-nav" class="gn-menu">
-	                    <li class="current"><a href="#intro"><i class="gn-icon icon-home"></i>Home</a></li>
-	                    <li class=""><a href="#about"><i class="gn-icon linecon-bulb"></i>About</a></li>
-	                    <li class=""><a href="#about-1"><i class="gn-icon linecon-star"></i>Features</a></li>
-	                    <li><a href="#testimonials"><i class="gn-icon linecon-like"></i>Testimonials</a></li>
-	                    <li><a href="#pricing"><i class="gn-icon linecon-banknote"></i>Pricing</a></li>
-	                  </ul>
-	                </div><!-- /gn-scroller -->
-	              </nav>
-	            </li>
+		<header id="header" class="morph-header-large">
 
-	            <!-- logo -->
-	            <li class="logo-wrapper"><a class="logo home" href="index-full.html">CASSIUS</a></li>
-
-	            <!-- top right: call to action -->
-	            <li class="cta"><a href="login.html">Login</a></li>
-	            <li class="cta hidden-xxsm"><a href="signup.html">Sign up</a></li>
-	          </ul>
-	        </div>
-
-	        <div id="nav" class="col-lg-3 section-header hidden-xs">
-	          <a class="display prev" id="prev" href="#"><span aria-hidden="true" class="icon-angle-up"></span></a>
-	          <a class="display next" id="next" href="#"><span aria-hidden="true" class="icon-angle-down"></span></a>
-	        </div>
-	    </header>
+		    <nav role="navigation">
+		      <div class="container">
+		        <!-- Brand and toggle get grouped for better mobile display -->
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span data-icon="fa fa-bars fa-4x" aria-hidden="true"></span>
+		          </button>
+		          <a class="navbar-brand" href=""><img src="img/ofertip.png" class="img-responsive" alt="" style="margin: 15px 0 24px;"></a>
+		        </div>
+		        <div id="main-nav" class="collapse navbar-collapse navbar-collapse">          
+		          <ul class="nav navbar-nav fancy-nav navbar-right">
+		            <!--////////// MENU //////////-->
+		            
+		            <li class="active"><a href="#funcionamiento"><span data-hover="¿Como Funciona?">¿Como Funciona?</span></a></li>
+		            <li><a href="#beneficios"><span data-hover="Beneficios">Beneficios</span></a></li>
+		            <li><a href="#inicio"><span data-hover="Locaciones">Locaciones</span></a></li>
+		            <li><a href="#planesyprecios"><span data-hover="Planes y Precios">Planes y Precios</span></a></li>
+		            <li class=""><a href="#contacto"><span data-hover="Contacto">Contacto</span></a></li>
+		            <!-- <li class=""><a href="#modalRegistro" data-toggle="modal" data->
+					  <i class="fa fa-user fa-2x"></i></a>
+					</button></li> -->
+		          </ul>
+		        </div><!-- /navbar-collapse -->
+		      </div><!-- /container -->
+		    </nav>
+		   <!--  @include('Usuario.formRegistro') -->
+	  	</header>
 	  	<section class="section" id="inicio" data-section="1">
-			<div class="container" style="padding: 0 15px">
 			<div class="row">
-					<div id="inicio-Derecho" class="col-md-6 text-right" >
-						<img src="http://placehold.it/350x222" alt="imagen celulares">
+					<div id="inicio-Izquierdo" class="col-md-6 text-right" >
+						<img src="img/telefono.png" alt="imagen celulares">
 					</div>
-					<div id="inicio-Izquierdo"class="col-md-6 ">
-						<h1>Titulo Mensaje 1</h1>
-						<h1>Titulo Mensaje 2</h1>
+					<div id="inicio-Derecho"class="col-md-6 ">
+						<h1>Suscribete a los Mejores</h1>
+						<h1>Recibe las Mejores Ofertas</h1>
 								
 						<p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
 						</p>	
 						<div id="descargas">
 							<div id="googleplay">
-				                <a href="#" target="_blank">
-								   	<img src="http://placehold.it/194x70" width="194" height="70">
+				                <a href="#" >
+								   	<img src="img/googleplay.png" >
 				                </a>
 				            </div>
 						</div>
