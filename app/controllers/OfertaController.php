@@ -4,8 +4,8 @@ use App\Controllers\Interfaces\IGetMantenimiento;
 
 class OfertaController extends BaseController implements IPostMantenimiento,IGetMantenimiento{
 
-	public static function AgregarBD($idTienda){
-		Oferta::create(OfertaController::AsignarValoresPost($idTienda));
+	public static function AgregarBD(){
+		Oferta::create(OfertaController::AsignarValoresPost());
 	}
 	public static function ModificarBD($idRegistro){
 		$Oferta = Oferta::find($idRegistro);
@@ -15,12 +15,12 @@ class OfertaController extends BaseController implements IPostMantenimiento,IGet
 	}
 	public static function AsignarValoresPost($idRegistro){
 		return array(
-			'idTienda'=>$idRegistro,
+			'idTienda'=>Input::get('idTienda'),
 			'nombreOferta'=>Input::get('nombreOferta'),
-			'descripcionOferta'=>Input::get('descripcionOferta'),
-			'precioNormalOferta'=>Input::get('tipoMoneda').' '.Input::get('precioNormalOferta'),
-			'precioOferta'=>Input::get('tipoMoneda').' '.Input::get('precioOferta'),
-			'precioOfertaSuscripcion'=>Input::get('tipoMoneda').' '.Input::get('precioOfertaSuscripcion'),
+			'descripcionOferta'=>Input::get('descripcionOferta').' '.Input::get('tipoMoneda'),
+			'precioNormalOferta'=>Input::get('precioNormalOferta').' '.Input::get('tipoMoneda'),
+			'precioOferta'=>Input::get('precioOferta').' '.Input::get('tipoMoneda'),
+			'precioOfertaSuscripcion'=>Input::get('precioOfertaSuscripcion').' '.Input::get('tipoMoneda'),
 			'fechaInicioOferta'=>Input::get('fechaInicioOferta'),
 			'fechaTerminoOferta'=>Input::get('fechaTerminoOferta'));
 	}

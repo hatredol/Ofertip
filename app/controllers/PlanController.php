@@ -4,7 +4,7 @@ use App\Controllers\Interfaces\IGetMantenimiento;
 
 class TiendaController extends BaseController implements IPostMantenimiento,IGetMantenimiento{
 
-	public static function AgregarBD($idRegistro){
+	public static function AgregarBD(){
 		
 		$Tienda = Tienda::create(TiendaController::AsignarValoresPost());
 		$Tienda->motorvehiculo()->save($motorVehiculo);

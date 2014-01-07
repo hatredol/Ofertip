@@ -44,10 +44,10 @@
 					</div>
 					<div class="row">
 		            	<div class="col-md-6">
-		            		{{ Form::open(array('url' => 'Panel/'.$tienda->idTienda.'/Ofertas/AgregarBD')) }}
+		            		{{ Form::open(array('url' => 'Panel/Ofertas/AgregarBD')) }}
 							  <div class="form-group">
-							    <label for="nombreOferta">Titulo de Oferta:</label>
-							    <input type="text" class="form-control" name="nombreOferta" placeholder="Titulo de la oferta">
+							    <label for="tituloOferta">Titulo de Oferta:</label>
+							    <input type="text" class="form-control" name="tituloOferta" placeholder="Titulo de la oferta">
 							  </div>
 							  <div class="form-group">
 							  	<label for="descripcionOferta">Descripcion de la Oferta:</label>
