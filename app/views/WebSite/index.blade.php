@@ -18,6 +18,7 @@
 		        <!-- Brand and toggle get grouped for better mobile display -->
 		        <div class="navbar-header">
 		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		          	
 		            <span data-icon="fa fa-bars fa-4x" aria-hidden="true"></span>
 		          </button>
 		          <a class="navbar-brand" href=""><img src="img/ofertip.png" class="img-responsive" alt="" style="margin: 15px 0 24px;"></a>
